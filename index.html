@@ -8,42 +8,42 @@
 
 <body>
   <header class="site-header">
-    <a class="site-header__logo site-logo" href="index_bem.html">
+    <a class="site-header__logo site-logo">
       <svg class="site-logo__img" role="img" title="Device">
         <use xlink:href="img/svg/icons.svg#device-logo"></use>
       </svg>
     </a>
-    <div class="site-header__actions user-actions">
-      <form class="user-actions__search site-search" method="get">
-        <label for="site-search__label" name="search">
-          <svg class="site-search__icon" role="img" title="Search">
-            <use xlink:href="img/svg/icons.svg#search"></use>
-          </svg>
-        </label>
-        <input class="site-search__field" type="search" id="search-form">
-        <input class="site-search__button" type="submit" value="Найти">
-      </form>
-      <ul class="user-actions__nav actions-nav">
-        <li class="actions-nav__item action action_login">
-          <svg class="action__icon" role="img" title="Login">
-            <use xlink:href="img/svg/icons.svg#user"></use>
-          </svg>
-          <a class="action__link" href="#">Войти</a>
-        </li>
-        <li class="actions-nav__item action action_compare">
-          <svg class="action__icon" role="img" title="Compare">
-            <use xlink:href="img/svg/icons.svg#compare"></use>
-          </svg>
-          <a class="action__link" href="#">Сравнить</a>
-        </li>
-        <li class="actions-nav__item action action_cart">
-          <svg class="actions__icon" role="img" title="Cart">
-            <use xlink:href="img/svg/icons.svg#cart"></use>
-          </svg>
-          <a class="actions__link" href="#">Корзина</a>
-        </li>
-      </ul>
-    </div>
+    <ul class="site-header__actions user-actions">
+      <li class="user-actions__search">
+        <form class="site-search__form" method="get">
+          <label for="site-search__label" name="search">
+            <svg class="site-search__icon" role="img" title="Search">
+              <use xlink:href="img/svg/icons.svg#search"></use>
+            </svg>
+          </label>
+          <input class="site-search__field" type="search" id="search-form" value="Поиск по сайту">
+          <input class="site-search__button" type="submit" value="Найти">
+        </form>
+      </li>
+      <li class="user-actions__login action action_login">
+        <svg class="action__icon" role="img" title="Login">
+          <use xlink:href="img/svg/icons.svg#user"></use>
+        </svg>
+        <a class="action__link" href="#">Войти</a>
+      </li>
+      <li class="user-actions__compare action action_compare">
+        <svg class="action__icon" role="img" title="Compare">
+          <use xlink:href="img/svg/icons.svg#compare"></use>
+        </svg>
+        <a class="action__link" href="#">Сравнить</a>
+      </li>
+      <li class="user-actions__cart action action_cart">
+        <svg class="actions__icon" role="img" title="Cart">
+          <use xlink:href="img/svg/icons.svg#cart"></use>
+        </svg>
+        <a class="actions__link" href="#">Корзина</a>
+      </li>
+    </ul>
     <nav class="site-header__nav site-nav">
       <ul class="site-nav__list">
         <li class="site-nav__item site-nav__item_expandable">
@@ -104,15 +104,15 @@
           <p class="slide__description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
           <a class="slide__product-link site-btn" href="#">Подробнее</a>
           <table class="slide__product-details product-details">
-            <tr class="product-details__value-row">
+            <tr class="product-details__row">
               <td class="product-details__value">8,5 м</td>
               <td class="product-details__value">5 кг</td>
               <td class="product-details__value">Карбон</td>
             </tr>
-            <tr class="product-details__parameter-row">
-              <td class="product-details__parameter">Длина палки</td>
-              <td class="product-details__parameter">Вес палки</td>
-              <td class="product-details__parameter">Материал</td>
+            <tr class="product-details__row">
+              <th class="product-details__parameter">Длина палки</th>
+              <th class="product-details__parameter">Вес палки</th>
+              <th class="product-details__parameter">Материал</th>
             </tr>
           </table>
         </section>
@@ -138,7 +138,7 @@
           <p class="slide__description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
           <a class="slide__product-link site-btn" href="#">Подробнее</a>
           <table class="slide__product-details product-details">
-            <tr class="product-details__value-row"">
+            <tr class="product-details__value-row">
               <td class="product-details__value">800 м</td>
               <td class="product-details__value">50 м</td>
             </tr>
@@ -193,28 +193,28 @@
     </section>
     <section class="page-content__services services">
       <h2 class="vissualy-hidden">Наш сервис</h2>
-      <section class="services__service-delivery service-delivery">
-        <button class="service-delivery__btn site-btn">Доставка</button>
-        <h3 class="service-delivery__heading">Доставка</h3>
-        <p class="service-delivery__description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-        <svg class="service-delivery__img" role="img" title="Delivery">
-            <use xlink:href="img/svg/icons.svg#delivery"></use>
+      <section class="services__content">
+        <button class="services__btn services__btn_curent site-btn">Доставка</button>
+        <h3 class="services__heading">Доставка</h3>
+        <p class="services__description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+        <svg class="services__img" role="img" title="Delivery">
+          <use xlink:href="img/svg/icons.svg#delivery"></use>
         </svg>
       </section>
-      <section class="services__service-warranty service-warranty">
-        <button class="service-warranty__btn site-btn">Гарантия</button>
-        <h3 class="service-warranty__heading">Гарантия</h3>
-        <p class="service-warranty__description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-        <svg class="service-warranty__img" role="img" title="Warranty">
-            <use xlink:href="img/svg/icons.svg#warranty"></use>
+      <section class="services__content">
+        <button class="services__btn site-btn">Гарантия</button>
+        <h3 class="services__heading">Гарантия</h3>
+        <p class="services__description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+        <svg class="services__img" role="img" title="Warranty">
+          <use xlink:href="img/svg/icons.svg#warranty"></use>
         </svg>
       </section>
-      <section class="services__service-credit service-credit">
-        <button class="service-credit__btn site-btn">Кредит</button>
-        <h3 class="service-credit__heading">Кредит</h3>
-        <p class="service-credit__description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-        <svg class="service-credit__img" role="img" title="Credit">
-            <use xlink:href="img/svg/icons.svg#credit"></use>
+      <section class="services__content">
+        <button class="services__btn site-btn">Кредит</button>
+        <h3 class="services__heading">Кредит</h3>
+        <p class="services__description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+        <svg class="services__img" role="img" title="Credit">
+          <use xlink:href="img/svg/icons.svg#credit"></use>
         </svg>
       </section>
     </section>
@@ -257,7 +257,7 @@
         <h3 class="contacts__heading">Контакты</h3>
         <p class="contacts__description">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
         <img class="contacts__map" src="img/map.jpg">
-        <button class="contacts__contact-form site-btn" href="#">Напишите нам</button>
+        <button class="contacts__contact-btn site-btn" href="#">Напишите нам</button>
       </section>
     </div>
   </main>
@@ -267,39 +267,37 @@
         <use xlink:href="img/svg/icons.svg#device-logo"></use>
       </svg>
     </a>
-    <div class="site-footer__actions user-actions">
-      <ul class="user-actions__nav actions-nav">
-        <li class="actions-nav__item action action_login">
-          <svg class="action__icon action__icon_footer" role="img" title="Login">
-            <use xlink:href="img/svg/icons.svg#user"></use>
-          </svg>
-          <a class="action__link action__link_footer" href="#">Войти</a>
-        </li>
-        <li class="actions-nav__item action action_compare">
-          <svg class="action__icon action__icon_footer" role="img" title="Compare">
-            <use xlink:href="img/svg/icons.svg#compare"></use>
-          </svg>
-          <a class="action__link action__link_footer" href="#">Сравнить</a>
-        </li>
-        <li class="actions-nav__item action action_cart">
-          <svg class="actions__icon action__icon_footer" role="img" title="Cart">
-            <use xlink:href="img/svg/icons.svg#cart"></use>
-          </svg>
-          <a class="actions__link action__link_footer" href="#">Корзина</a>
-        </li>
-      </ul>
-    </div>
+    <ul class="site-footer__actions user-actions">
+      <li class="user-actions__login action action_login">
+        <svg class="action__icon action__icon_footer" role="img" title="Login">
+          <use xlink:href="img/svg/icons.svg#user"></use>
+        </svg>
+        <a class="action__link action__link_footer" href="#">Войти</a>
+      </li>
+      <li class="user-actions__compare action action_compare">
+        <svg class="action__icon action__icon_footer" role="img" title="Compare">
+          <use xlink:href="img/svg/icons.svg#compare"></use>
+        </svg>
+        <a class="action__link action__link_footer" href="#">Сравнить</a>
+      </li>
+      <li class="user-actions__cart action action_cart">
+        <svg class="actions__icon action__icon_footer" role="img" title="Cart">
+          <use xlink:href="img/svg/icons.svg#cart"></use>
+        </svg>
+        <a class="actions__link action__link_footer" href="#">Корзина</a>
+      </li>
+    </ul>
     <address class="site-footer__address">г. Москва, ул. Строителей, 15</address>
     <nav class="site-footer__nav site-nav">
       <ul class="site-nav__list">
         <li class="site-nav__item">
-          <a class="site-nav__link site-nav__link-footer" href="#">Доставка</a>
+          <a class="site-nav__link site-nav__link_footer" href="#">Доставка</a>
         </li>
         <li class="site-nav__item">
-          <a class="site-nav__link site-nav__link-footer" href="#">Гарантия</a>
+          <a class="site-nav__link site-nav__link_footer" href="#">Гарантия</a>
         </li>
         <li class="site-nav__item">
-          <a class="site-nav__link site-nav__link-footer" href="#">Контакты</a>
+          <a class="site-nav__link site-nav__link_footer" href="#">Контакты</a>
         </li>
       </ul>
     </nav>
@@ -324,7 +322,6 @@
       <a class="copyright__link" href="https://htmlacademy.ru">HTML Academy</a>
     </div>
   </footer>
-
   <!-- MODAL -->
   <div class="modal-contact">
     <button class="modal-contact__close-btn close-btn">
