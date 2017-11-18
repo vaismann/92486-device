@@ -8,8 +8,8 @@
 
 <body>
   <header class="site-header">
-    <a class="site-header__logo site-logo" href="index.html">
-      <svg class="site-logo__img" role="img" title="Device">
+    <a class="site-header__logo site-logo" href="index.html" aria-label="Интернет-магазин гаджетов «Device»">
+      <svg class="site-logo__img" aria-hidden="true">
         <use xlink:href="img/svg/icons.svg#device-logo"></use>
       </svg>
     </a>
@@ -17,31 +17,28 @@
       <li class="user-actions__search site-search">
         <form class="site-search__form" method="get">
           <label for="site-search__label" name="search">
-            <svg class="site-search__icon" role="img" title="Search">
+            <svg class="site-search__icon" aria-hidden="true">
               <use xlink:href="img/svg/icons.svg#search"></use>
             </svg>
           </label>
-          <input class="site-search__field" type="search" id="search-form" value="Поиск по сайту">
-          <input class="site-search__button" type="submit" value="Найти">
+          <input class="site-search__field" type="search" id="search-form" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+          <button class="site-search__button" aria-label="Найти">Найти</button>
         </form>
       </li>
       <li class="user-actions__login action action_login">
-        <svg class="action__icon" role="img" title="Login">
+        <svg class="action__icon" role="img" title="Login" aria-hidden="true">
           <use xlink:href="img/svg/icons.svg#user"></use>
         </svg>
-        <a class="action__link" href="#">Валентин Петухов</a>
-      </li>
-      <li class="user-actions__logout action action_logout">
-        <a class="action__link action__link_logout" href="#">Выйти</a>
+        <a class="action__link" href="#">Войти</a>
       </li>
       <li class="user-actions__compare action action_compare">
-        <svg class="action__icon" role="img" title="Compare">
+        <svg class="action__icon" role="img" title="Compare" aria-hidden="true">
           <use xlink:href="img/svg/icons.svg#compare"></use>
         </svg>
         <a class="action__link" href="#">Сравнить</a>
       </li>
       <li class="user-actions__cart action action_cart">
-        <svg class="actions__icon" role="img" title="Cart">
+        <svg class="actions__icon" role="img" title="Cart" aria-hidden="true">
           <use xlink:href="img/svg/icons.svg#cart"></use>
         </svg>
         <a class="actions__link" href="#">Корзина</a>
@@ -50,8 +47,8 @@
     <nav class="site-header__nav site-nav">
       <ul class="site-nav__list">
         <li class="site-nav__item site-nav__item_expandable">
-          <a class="site-nav__link">Каталог товаров</a>
-          <svg class="site-nav__icon" role="img" title="Plus">
+          <a class="site-nav__link" tabindex="0">Каталог товаров</a>
+          <svg class="site-nav__icon" role="img" title="Plus" aria-hidden="true">
             <use xlink:href="img/svg/icons.svg#plus"></use>
           </svg>
           <ul class="site-nav__sub-list">
@@ -92,7 +89,7 @@
       <h3 class="catalog__heading">Моноподы для селфи</h3>
       <ul class="catalog__breadcrumbs breadcrumbs-list">
         <li class="breadcrumbs-list__item">
-          <a class="breadcrumbs-list__link" href="#">Главная </a>
+          <a class="breadcrumbs-list__link" href="#">Главная</a>
         </li>
         <li class="breadcrumbs-list__item">
           <a class="breadcrumbs-list__link" href="#">Каталог товаров</a>
@@ -101,34 +98,40 @@
           <a class="breadcrumbs-list__link" href="#">Моноподы для селфи</a>
         </li>
       </ul>
-      <section class="page-content__filter filter">
-        <h4 class="filter__heading">Фильтр:</h4>
-        <form class="filter__form form">
+      <section class="page-content__filter-section filter-section">
+        <h4 class="filter-section__heading">Фильтр:</h4>
+        <form class="filter-section__form form">
           <!--Price Filter  -->
-          <p class="form__heading">Стоимость</p>
-          <input class="form__range" type="range" multiple id="price-field" min="0" max="10000" step="5000">
+          <fieldset class="form__filter price-filter">
+            <legend class="price-filter__heading">Стоимость</legend>
+            <input class="price-filter__price-slider price-slider" type="range" multiple id="price-field" min="0" max="10000" step="5000">
+          </fieldset>
           <!-- Colour Filter -->
-          <p class="form__heading">Цвет</p>
-          <input class="form__input form__input_checkbox form__input_checkbox_checked" type="checkbox" id="black-colour">
-          <label class="form__label" for="black-colour">Черный</label>
-          <input class="form__input form__input_checkbox" type="checkbox" id="white-colour">
-          <label class="form__label" for="white-colour">Белый</label>
-          <input class="form__input form__input_checkbox form__input_checkbox_checked" type="checkbox" id="blue-colour">
-          <label class="form__label" for="blue-colour">Синий</label>
-          <input class="form__input form__input_checkbox form__input_checkbox_checked" type="checkbox" id="red-colour">
-          <label class="form__label" for="red-colour">Красный</label>
-          <input class="form__input form__input_checkbox" type="checkbox" id="rose-colour">
-          <label class="form__label" for="rose-colour">Розовый</label>
+          <fieldset class="form__filter colour-filter">
+            <legend class="colour-filter__heading">Цвет</legend>
+            <input class="colour-filter__input colour-filter__input_checkbox colour-filter__input_checkbox_checked" type="checkbox" id="black-colour">
+            <label class="colour-filter__label" for="black-colour">Черный</label>
+            <input class="colour-filter__input colour-filter__input_checkbox" type="checkbox" id="white-colour">
+            <label class="colour-filter__label" for="white-colour">Белый</label>
+            <input class="colour-filter__input colour-filter__input_checkbox colour-filter__input_checkbox_checked" type="checkbox" id="blue-colour">
+            <label class="colour-filter__label" for="blue-colour">Синий</label>
+            <input class="colour-filter__input colour-filter__input_checkbox colour-filter__input_checkbox_checked" type="checkbox" id="red-colour">
+            <label class="colour-filter__label" for="red-colour">Красный</label>
+            <input class="colour-filter__input colour-filter__input_checkbox" type="checkbox" id="rose-colour">
+            <label class="colour-filter__label" for="rose-colour">Розовый</label>
+          </fieldset>
           <!-- Bluetooth Filter -->
-          <p class="form__heading">Bluetooth</p>
-          <input class="form__input form__input_radio form__input_radio_checked" type="radio" name="radio" id="yes">
-          <label class="form__label" for="yes">Есть</label>
-          <input class="form__input form__input_radio" type="radio" name="radio" id="no">
-          <label class="form__label" for="no">Нет</label>
-          <input class="form__btn site-btn" type="submit" name="submit" value="Показать">
+          <fieldset class="form__filter bluetooth-filter">
+            <legend class="bluetooth-filter__heading">Bluetooth</legend>
+            <input class="bluetooth-filter__input bluetooth-filter__input_radio bluetooth-filter__input_radio_checked" type="radio" name="radio" id="yes">
+            <label class="bluetooth-filter__label" for="yes">Есть</label>
+            <input class="bluetooth-filter__input bluetooth-filter__input_radio" type="radio" name="radio" id="no">
+            <label class="bluetooth-filter__label" for="no">Нет</label>
+          </fieldset>
+          <button class="form-filter-submit__btn site-btn" aria-label="Показать">Показать</button>
         </form>
       </section>
-      <section class="page-content__sorting sorting">
+      <section class="page-content__sorting sorting" aria-label="Сортировка">
         <h4 class="sorting__heading">Сортировка:</h4>
         <div class=sorting__type>
           <a class="sorting__link" href="#">По цене</a>
@@ -136,8 +139,8 @@
           <a class="sorting__link" href="#">По популярности</a>
         </div>
         <div class="sorting__type_direction">
-          <a class="sorting__link sorting__link_up" href="#">up</a>
-          <a class="sorting__link sorting__link_down" href="#">down</a>
+          <a class="sorting__link sorting__link_up" href="#" aria-label="по возрастанию"></a>
+          <a class="sorting__link sorting__link_down" href="#" aria-label="по убыванию"></a>
         </div>
       </section>
       <section class="page-content__product-section product-section">
@@ -171,48 +174,48 @@
           <a class="product-card__compare">Добавить к сравнению</a>
         </article>
       </section>
-      <div class="page-content__catalog-paginator catalog-paginator">
+      <div class="page-content__catalog-paginator catalog-paginator" aria-label="Переключение страниц с карточками товаров">
         <ul class="catalog-paginator__control-list">
           <li class="catalog-paginator__control-item">
-            <a class="catalog-paginator__control-link catalog-paginator__control-link_direction" href="#">Назад</a>
+            <a class="catalog-paginator__control-link catalog-paginator__control-link_direction" href="#" aria-label="Переход на предыдущую страницу">Назад</a>
           </li>
           <li class="catalog-paginator__control-item">
-            <a class="catalog-paginator__control-link catalog-paginator__control-link_current" href="">1</a>
+            <a class="catalog-paginator__control-link catalog-paginator__control-link_current" href="#" aria-label="Первая страница">1</a>
           </li>
           <li class="catalog-paginator__control-item">
-            <a class="catalog-paginator__control-link" href="">2</a>
+            <a class="catalog-paginator__control-link" href="#" aria-label="Вторая страница">2</a>
           </li>
           <li class="catalog-paginator__control-item">
-            <a class="catalog-paginator__control-link" href="">3</a>
+            <a class="catalog-paginator__control-link" href="#" aria-label="Третья страница">3</a>
           </li>
           <li class="catalog-paginator__control-item">
-            <a class="catalog-paginator__control-link catalog-paginator__control-link_direction" href="#">Вперед</a>
+            <a class="catalog-paginator__control-link catalog-paginator__control-link_direction" href="#" aria-label="Переход на следующую страницу">Вперед</a>
           </li>
         </ul>
       </div>
     </section>
   </main>
   <footer class="site-footer">
-    <a class="site-footer__logo site-logo" href="index_bem.html">
-      <svg class="site-logo__img site-logo__img_footer" role="img" title="Device">
+    <a class="site-footer__logo site-logo" href="index.html" aria-label="Интернет-магазин гаджетов «Device»">
+      <svg class="site-logo__img site-logo__img_footer" aria-hidden="true">
         <use xlink:href="img/svg/icons.svg#device-logo"></use>
       </svg>
     </a>
     <ul class="site-footer__actions user-actions">
       <li class="user-actions__login action action_login">
-        <svg class="action__icon action__icon_footer" role="img" title="Login">
+        <svg class="action__icon action__icon_footer" role="img" title="Login" aria-hidden="true">
           <use xlink:href="img/svg/icons.svg#user"></use>
         </svg>
         <a class="action__link action__link_footer" href="#">Войти</a>
       </li>
       <li class="user-actions__compare action action_compare">
-        <svg class="action__icon action__icon_footer" role="img" title="Compare">
+        <svg class="action__icon action__icon_footer" role="img" title="Compare" aria-hidden="true">
           <use xlink:href="img/svg/icons.svg#compare"></use>
         </svg>
         <a class="action__link action__link_footer" href="#">Сравнить</a>
       </li>
       <li class="user-actions__cart action action_cart">
-        <svg class="actions__icon action__icon_footer" role="img" title="Cart">
+        <svg class="actions__icon action__icon_footer" role="img" title="Cart" aria-hidden="true">
           <use xlink:href="img/svg/icons.svg#cart"></use>
         </svg>
         <a class="actions__link action__link_footer" href="#">Корзина</a>
@@ -235,22 +238,22 @@
     <p class="site-footer__phone">Тел.:
       <a class="site-footer__phone" href="tel:+7(495)495-95-95">+7 (495) 495-95-95</a>
     </p>
-    <section class="site-footer__social social">
+    <section class="site-footer__social social" aria-label="Наши социальные сети">
       <h2 class="vissualy-hidden">Наши социальные сети</h2>
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link social__link_fb" href="#">Facebook</a>
+          <a class="social__link social__link_fb" href="#" aria-label="Facebook"></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link_inst" href="#">Instagram</a>
+          <a class="social__link social__link_inst" href="#" aria-label="Instagram"></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link_tw" href="#">Twitter</a>
+          <a class="social__link social__link_tw" href="#" aria-label="Twitter"></a>
         </li>
       </ul>
     </section>
     <div class="site-footer__copyright copyright">
-      <a class="copyright__link" href="https://htmlacademy.ru">HTML Academy</a>
+      <a class="copyright__link" href="https://htmlacademy.ru" aria-label="HTML Academy"></a>
     </div>
   </footer>
 </body>
