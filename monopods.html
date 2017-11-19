@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Девайс</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
 </head>
 
 <body>
@@ -44,7 +47,7 @@
         <a class="actions__link" href="#">Корзина</a>
       </li>
     </ul>
-    <nav class="site-header__nav site-nav">
+    <nav class="site-header__nav site-nav" aria-label="Навигация по сайту">
       <ul class="site-nav__list">
         <li class="site-nav__item site-nav__item_expandable">
           <a class="site-nav__link" tabindex="0">Каталог товаров</a>
@@ -98,37 +101,55 @@
           <a class="breadcrumbs-list__link" href="#">Моноподы для селфи</a>
         </li>
       </ul>
-      <section class="page-content__filter-section filter-section">
-        <h4 class="filter-section__heading">Фильтр:</h4>
-        <form class="filter-section__form form">
+      <section class="page-content__filters filters">
+        <h4 class="filters__heading">Фильтр:</h4>
+        <form class="filters__form">
           <!--Price Filter  -->
-          <fieldset class="form__filter price-filter">
-            <legend class="price-filter__heading">Стоимость</legend>
-            <input class="price-filter__price-slider price-slider" type="range" multiple id="price-field" min="0" max="10000" step="5000">
+          <fieldset class="filters__wrapper">
+            <legend class="filters__legend">Стоимость</legend>
+            <input class="" type="range">
           </fieldset>
           <!-- Colour Filter -->
-          <fieldset class="form__filter colour-filter">
-            <legend class="colour-filter__heading">Цвет</legend>
-            <input class="colour-filter__input colour-filter__input_checkbox colour-filter__input_checkbox_checked" type="checkbox" id="black-colour">
-            <label class="colour-filter__label" for="black-colour">Черный</label>
-            <input class="colour-filter__input colour-filter__input_checkbox" type="checkbox" id="white-colour">
-            <label class="colour-filter__label" for="white-colour">Белый</label>
-            <input class="colour-filter__input colour-filter__input_checkbox colour-filter__input_checkbox_checked" type="checkbox" id="blue-colour">
-            <label class="colour-filter__label" for="blue-colour">Синий</label>
-            <input class="colour-filter__input colour-filter__input_checkbox colour-filter__input_checkbox_checked" type="checkbox" id="red-colour">
-            <label class="colour-filter__label" for="red-colour">Красный</label>
-            <input class="colour-filter__input colour-filter__input_checkbox" type="checkbox" id="rose-colour">
-            <label class="colour-filter__label" for="rose-colour">Розовый</label>
+          <fieldset class="">
+            <legend class="">Цвет</legend>
+            <ul class="">
+              <li class="">
+                <input class="" type="checkbox" id="black-colour">
+                <label class="" for="black-colour">Черный</label>
+              </li>
+              <li class="">
+                <input class="" type="checkbox" id="white-colour">
+                <label class="" for="white-colour">Белый</label>
+              </li>
+              <li class="">
+                <input class="" type="checkbox" id="blue-colour">
+                <label class="" for="blue-colour">Синий</label>
+              </li>
+              <li class="">
+                <input class="" type="checkbox" id="red-colour">
+                <label class="" for="red-colour">Красный</label>
+              </li>
+              <li class="">
+                <input class="" type="checkbox" id="rose-colour">
+                <label class="" for="rose-colour">Розовый</label>
+              </li>
+            </ul>
           </fieldset>
           <!-- Bluetooth Filter -->
-          <fieldset class="form__filter bluetooth-filter">
-            <legend class="bluetooth-filter__heading">Bluetooth</legend>
-            <input class="bluetooth-filter__input bluetooth-filter__input_radio bluetooth-filter__input_radio_checked" type="radio" name="radio" id="yes">
-            <label class="bluetooth-filter__label" for="yes">Есть</label>
-            <input class="bluetooth-filter__input bluetooth-filter__input_radio" type="radio" name="radio" id="no">
-            <label class="bluetooth-filter__label" for="no">Нет</label>
+          <fieldset class="">
+            <legend class="">Bluetooth</legend>
+            <ul class="">
+              <li class="">
+                <input class="" type="radio" name="radio" id="yes">
+                <label class="" for="yes">Есть</label>
+              </li>
+              <li class="">
+                <input class="" type="radio" name="radio" id="no">
+                <label class="" for="no">Нет</label>
+              </li>
+            </ul>
           </fieldset>
-          <button class="form-filter-submit__btn site-btn" aria-label="Показать">Показать</button>
+          <button class="form-filter__submit-btn site-btn" aria-label="Показать">Показать</button>
         </form>
       </section>
       <section class="page-content__sorting sorting" aria-label="Сортировка">
@@ -222,7 +243,7 @@
       </li>
     </ul>
     <address class="site-footer__address">г. Москва, ул. Строителей, 15</address>
-    <nav class="site-footer__nav site-nav">
+    <nav class="site-footer__nav site-nav" aria-label="Навигация по сайту">
       <ul class="site-nav__list">
         <li class="site-nav__item">
           <a class="site-nav__link site-nav__link_footer" href="#">Доставка</a>
@@ -253,7 +274,11 @@
       </ul>
     </section>
     <div class="site-footer__copyright copyright">
-      <a class="copyright__link" href="https://htmlacademy.ru" aria-label="HTML Academy"></a>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academy">
+        <svg class="copyright__icon" role="img" title="Logo-Html" aria-hidden="true">
+          <use xlink:href="img/svg/icons.svg#logo-html"></use>
+        </svg>
+      </a>
     </div>
   </footer>
 </body>

@@ -4,11 +4,13 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
 </head>
-
 <body>
   <header class="site-header">
-    <a class="site-header__logo site-logo" aria-label="Интернет-магазин гаджетов «Device»">
+    <a class="site-header__logo site-logo" aria-label="Логотип интернет-магазина гаджетов «Device»">
       <svg class="site-logo__img" aria-hidden="true">
         <use xlink:href="img/svg/icons.svg#device-logo"></use>
       </svg>
@@ -16,13 +18,13 @@
     <ul class="site-header__actions user-actions">
       <li class="user-actions__search site-search">
         <form class="site-search__form" method="get">
-          <label for="site-search__label" name="search">
+          <label class="site-search__label" name="search" for="search-field">
             <svg class="site-search__icon" aria-hidden="true">
               <use xlink:href="img/svg/icons.svg#search"></use>
             </svg>
           </label>
-          <input class="site-search__field" type="search" id="search-form" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
-          <button class="site-search__button" aria-label="Найти">Найти</button>
+          <input class="site-search__field" type="search" id="search-field" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+          <button class="site-search__button">Найти</button>
         </form>
       </li>
       <li class="user-actions__login action action_login">
@@ -44,7 +46,7 @@
         <a class="actions__link" href="#">Корзина</a>
       </li>
     </ul>
-    <nav class="site-header__nav site-nav">
+    <nav class="site-header__nav site-nav" aria-label="Навигация по сайту">
       <ul class="site-nav__list">
         <li class="site-nav__item site-nav__item_expandable">
           <a class="site-nav__link" tabindex="0">Каталог товаров</a>
@@ -158,37 +160,36 @@
       <div class="categories__wrapper category">
         <a class="category__link category__link_virtual" href="virtual.html">
           Виртуальная реальность
-          <svg class="category__link-img" role="img" title="Virtual" aria-hidden="true">
+          <svg class="category__link-img" role="img" title="Virtual">
             <use xlink:href="img/svg/icons.svg#popular-1"></use>
           </svg>
         </a>
         <a class="category__link category__link_monopod" href="monopods.html">
           Моноподы для селфи
-          <svg class="category__link-img" role="img" title="Monopod" aria-hidden="true">
+          <svg class="category__link-img" role="img" title="Monopod">
             <use xlink:href="img/svg/icons.svg#popular-2"></use>
           </svg>
         </a>
         <a class="category__link category__link_camera" href="camera.html">
           Экшн-камеры
-          <svg class="category__link-img" role="img" title="Camera" aria-hidden="true">
+          <svg class="category__link-img" role="img" title="Camera">
             <use xlink:href="img/svg/icons.svg#popular-3"></use>
           </svg>
         </a>
         <a class="category__link category__link_bracelet" href="bracelet.html">
           Фитнес-браслеты
-          <svg class="category__link-img" role="img" title="Bracelet" aria-hidden="true">
+          <svg class="category__link-img" role="img" title="Bracelet">
             <use xlink:href="img/svg/icons.svg#popular-4"></use>
           </svg>
         </a>
         <a class="category__link category__link_watch" href="watch.html">
           Умные часы
-          <svg class="category__link-img" role="img" title="Watch" aria-hidden="true">
+          <svg class="category__link-img" role="img" title="Watch">
             <use xlink:href="img/svg/icons.svg#popular-5"></use>
           </svg>
         </a>
         <a class="category__link category__link_quadrocopter" href="quadrocopter.html">
           Квадрокоптеры
-          <svg class="category__link-img" role="img" title="Quadrocopter" aria-hidden="true">
             <use xlink:href="img/svg/icons.svg#popular-6"></use>
           </svg>
         </a>
@@ -259,8 +260,8 @@
       <section class="company-details__contacts contacts">
         <h3 class="contacts__heading">Контакты</h3>
         <p class="contacts__description">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <div class="contacts__map">
-          <img class="contacts__map-image" src="img/map.jpg" alt="Наше местоположение на карте">
+        <div class="contacts__map map">
+          <img class="map__image" src="img/map.jpg" alt="Наше местоположение на карте">
         </div>
         <a class="contacts__contact-link site-btn" href="#">Напишите нам</a>
       </section>
@@ -293,7 +294,7 @@
       </li>
     </ul>
     <address class="site-footer__address">г. Москва, ул. Строителей, 15</address>
-    <nav class="site-footer__nav site-nav">
+    <nav class="site-footer__nav site-nav" aria-label="Навигация по сайту">
       <ul class="site-nav__list">
         <li class="site-nav__item">
           <a class="site-nav__link site-nav__link_footer" href="#">Доставка</a>
@@ -324,7 +325,11 @@
       </ul>
     </section>
     <div class="site-footer__copyright copyright">
-      <a class="copyright__link" href="https://htmlacademy.ru" aria-label="HTML Academy"></a>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academy">
+        <svg class="copyright__icon" role="img" title="Logo-Html" aria-hidden="true">
+          <use xlink:href="img/svg/icons.svg#logo-html"></use>
+        </svg>
+      </a>
     </div>
   </footer>
   <!-- MODAL -->
