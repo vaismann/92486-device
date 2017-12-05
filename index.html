@@ -8,340 +8,353 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
-  <header class="header">
-    <a class="header__logo site-logo" href="#" aria-label="Логотип интернет-магазина гаджетов «Device»">
-      <svg class="site-logo__img">
-        <use xlink:href="img/svg/icons.svg#device-logo"></use>
-      </svg>
-    </a>
-    <ul class="header__actions user-actions">
-      <li class="user-actions__search site-search">
-        <form class="site-search__form" method="get">
-          <label class="site-search__label" name="search" for="search-field">
-            <svg class="site-search__icon">
-              <use xlink:href="img/svg/icons.svg#search"></use>
-            </svg>
-          </label>
-          <input class="site-search__field" type="search" id="search-field" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
-          <button class="site-search__button">Найти</button>
-        </form>
-      </li>
-      <li class="user-actions__login action action_login">
-        <svg class="action__icon">
-          <use xlink:href="img/svg/icons.svg#user"></use>
-        </svg>
-        <a class="action__link" href="#">Войти</a>
-      </li>
-      <li class="user-actions__compare action action_compare">
-        <svg class="action__icon">
-          <use xlink:href="img/svg/icons.svg#compare"></use>
-        </svg>
-        <a class="action__link" href="#">Сравнить</a>
-      </li>
-      <li class="user-actions__cart action action_cart">
-        <svg class="actions__icon">
-          <use xlink:href="img/svg/icons.svg#cart"></use>
-        </svg>
-        <a class="action__link" href="#">Корзина</a>
-      </li>
-    </ul>
-    <nav class="header__nav nav" aria-label="Главная навигация по сайту">
-      <ul class="nav__list">
-        <li class="nav__item nav__item_expandable">
-          <a class="nav__link" tabindex="0">Каталог товаров</a>
-          <svg class="nav__icon">
-            <use xlink:href="img/svg/icons.svg#plus"></use>
-          </svg>
-          <ul class="nav__sub-list">
-            <li class="nav__sub-item">
-              <a class="nav__sub-link" href="#">Виртуальная реальность</a>
-            </li>
-            <li class="nav__sub-item">
-              <a class="nav__sub-link" href="monopods.html">Моноподы для селфи</a>
-            </li>
-            <li class="nav__sub-item">
-              <a class="nav__sub-link" href="#">Экшн-камеры</a>
-            </li>
-            <li class="nav__sub-item">
-              <a class="nav__sub-link" href="#">Фитнес-браслеты</a>
-            </li>
-            <li class="nav__sub-item">
-              <a class="nav__sub-link" href="#">Умные-часы</a>
-            </li>
-            <li class="nav__sub-item">
-              <a class="nav__sub-link" href="#">Квадрокоптеры</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#">Доставка</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#">Гарантия</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#">Контакты</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main class="main">
-    <h1 class="visually-hidden">Интернет-магазин гаджетов «Device»</h1>
-    <section class="main__slider slider">
-      <h2 class="visually-hidden">Популярные товары</h2>
-      <ul class="slider__slides-switcher slides-switcher" aria-label="Переключатели слайдов">
-        <li class="slides-switcher__radio">
-          <button class="slides-switcher__btn">Первый слайд</button>
-        </li>
-        <li class="slides-switcher__radio">
-          <button class="slides-switcher__btn">Второй слайд</button>
-        </li>
-        <li class="slides-switcher__radio">
-          <button class="slides-switcher__btn">Третий слайд</button>
-        </li>
-      </ul>
-      <div class="slider__slide-wrapper slide-wrapper">
-        <section class="slide-wrapper__slide slide">
-          <img class="slide__img" src="img/slider/slider-1.png" width="384" height="486" alt="Самая длинная палка для сэлфи">
-          <span class="slide__order" aria-label="Первый слайд">01</span>
-          <h3 class="slide__slogan main-heading">Делай селфи, как Бен Стиллер!</h3>
-          <p class="slide__description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-          <a class="slide__product-link btn" href="#">Подробнее</a>
-          <table class="slide__product-details product-details">
-            <tr class="product-details__row">
-              <td class="product-details__value">8,5 м</td>
-              <td class="product-details__value">5 кг</td>
-              <td class="product-details__value">Карбон</td>
-            </tr>
-            <tr class="product-details__row">
-              <th class="product-details__parameter">Длина палки</th>
-              <th class="product-details__parameter">Вес палки</th>
-              <th class="product-details__parameter">Материал</th>
-            </tr>
-          </table>
-        </section>
-        <section class="slide-wrapper__slide slide">
-          <img class="slide__img" src="img/slider/slider-2.png" width="345" height="485" alt="Мотивирующие фитнесc-браслеты">
-          <span class="slide__order" aria-label="Второй слайд">02</span>
-          <h3 class="slide__slogan main-heading">Худеем правильно!</h3>
-          <p class="slide__description">Мотивирующие фитнесc-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-          <a class="slide__product-link btn" href="#">Подробнее</a>
-          <table class="slide__product-details product-details">
-            <tr class="product-details__value-row">
-              <td class="product-details__value">48 часов</td>
-            </tr>
-            <tr class="product-details__parameter-row">
-              <th class="product-details__parameter">Без подзарядки</th>
-            </tr>
-          </table>
-        </section>
-        <section class="slide-wrapper__slide slide">
-          <img class="slide__img" src="img/slider/slider-3.png" width="526" height="334" alt="Квадрокоптер оснащенные мощным лазером, замаскированным под стандартную камеру">
-          <span class="slide__order" aria-label="Третий слайд">03</span>
-          <h3 class="slide__slogan main-heading">Порхает как бабочка, жалит как пчела!</h3>
-          <p class="slide__description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-          <a class="slide__product-link btn" href="#">Подробнее</a>
-          <table class="slide__product-details product-details">
-            <tr class="product-details__value-row">
-              <td class="product-details__value">800 м</td>
-              <td class="product-details__value">50 м</td>
-            </tr>
-            <tr class="product-details__parameter-row">
-              <th class="product-details__parameter">Дальность полета</th>
-              <th class="product-details__parameter">Радиус поражения</th>
-            </tr>
-          </table>
-        </section>
-      </div>
-    </section>
-    <section class="main__categories categories">
-      <h2 class="visually-hidden">Категории товаров</h2>
-      <div class="categories__wrapper category">
-        <a class="category__link category__link_virtual" href="virtual.html">
-          Виртуальная реальность
-          <svg class="category__link-img">
-            <use xlink:href="img/svg/icons.svg#popular-1"></use>
-          </svg>
-        </a>
-        <a class="category__link category__link_monopod" href="monopods.html">
-          Моноподы для селфи
-          <svg class="category__link-img">
-            <use xlink:href="img/svg/icons.svg#popular-2"></use>
-          </svg>
-        </a>
-        <a class="category__link category__link_camera" href="camera.html">
-          Экшн-камеры
-          <svg class="category__link-img">
-            <use xlink:href="img/svg/icons.svg#popular-3"></use>
-          </svg>
-        </a>
-        <a class="category__link category__link_bracelet" href="bracelet.html">
-          Фитнес-браслеты
-          <svg class="category__link-img">
-            <use xlink:href="img/svg/icons.svg#popular-4"></use>
-          </svg>
-        </a>
-        <a class="category__link category__link_watch" href="watch.html">
-          Умные часы
-          <svg class="category__link-img">
-            <use xlink:href="img/svg/icons.svg#popular-5"></use>
-          </svg>
-        </a>
-        <a class="category__link category__link_quadrocopter" href="quadrocopter.html">
-          Квадрокоптеры
-            <use xlink:href="img/svg/icons.svg#popular-6"></use>
-          </svg>
-        </a>
-      </div>
-    </section>
-    <section class="main__services services">
-      <h2 class="visually-hidden">Наш сервис</h2>
-      <section class="services__content">
-        <a class="services__btn services__btn_curent btn">Доставка</a>
-        <h3 class="services__heading main-heading">Доставка</h3>
-        <p class="services__description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-        <svg class="services__img">
-          <use xlink:href="img/svg/icons.svg#delivery"></use>
-        </svg>
-      </section>
-      <section class="services__content">
-        <a class="services__btn btn">Гарантия</a>
-        <h3 class="services__heading main-heading">Гарантия</h3>
-        <p class="services__description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-        <svg class="services__img">
-          <use xlink:href="img/svg/icons.svg#warranty"></use>
-        </svg>
-      </section>
-      <section class="services__content">
-        <a class="services__btn btn">Кредит</a>
-        <h3 class="services__heading main-heading">Кредит</h3>
-        <p class="services__description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-        <svg class="services__img">
-          <use xlink:href="img/svg/icons.svg#credit"></use>
-        </svg>
-      </section>
-    </section>
-    <section class="main__brands brands">
-      <h2 class="visually-hidden">Список компаний-производителей продукции в нашем каталоге</h2>
-      <div class="brands__wrapper brand">
-        <a class="brand__link" href="http://www.dji.com/" aria-label="Сайт компании-производителя DJI">
-          <img class="brand__logo" src="img//brands/logo-1.jpg" width="260" height="100" alt="Логотип производителя DJI">
-        </a>
-        <a class="brand__link" href="http://www.sp-gadgets.com/" aria-label="Сайт компании-производителя SPGA">
-          <img class="brand__logo" src="img/brands/logo-2.jpg" width="260" height="100" alt="Логотип производителя SPGA">
-        </a>
-        <a class="brand__link" href="http://gopro.com/" aria-label="Сайт компании-производителя GOPRO">
-          <img class="brand__logo" src="img/brands/logo-3.jpg" width="260" height="100" alt="Логотип производителя GOPRO">
-        </a>
-        <a class="brand__link" href="https://www.htcvive.com/" aria-label="Сайт компании-производителя VIVE">
-          <img class="brand__logo" src="img/brands/logo-4.jpg" width="260" height="100" alt="Логотип производителя VIVE">
-        </a>
-      </div>
-    </section>
-    <div class="main__company-details company-details">
-      <section class="company-details__about-us about-us">
-        <h3 class="about-us__heading main-heading">О нас</h3>
-        <p class="about-us__description">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-        <p class="about-us__description">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями</p>
-        <ul class="about-us__delivery-partners-section delivery-partners">
-          <li class="delivery-partners__item">
-            <a class="delivery-partners__link" href="#">Деловые Линии</a>
-          </li>
-          <li class="delivery-partner__item">
-            <a class="delivery-partners__link" href="#">Автотрейдинг</a>
-          </li>
-          <li class="delivery-partner__item">
-            <a class="delivery-partners__link" href="#">ЖелДорЭкспедиция</a>
-          </li>
-        </ul>
-        <a class="about-us__more-info-link btn" href="#">Подробнее о нас</a>
-      </section>
-      <section class="company-details__contacts contacts">
-        <h3 class="contacts__heading main-heading">Контакты</h3>
-        <p class="contacts__description">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <div class="contacts__map map">
-          <img class="map__image" src="img/map.jpg" alt="Наше местоположение на карте">
-        </div>
-        <a class="contacts__contact-link btn" href="#">Напишите нам</a>
-      </section>
-    </div>
-  </main>
-  <footer class="footer">
-    <a class="footer__logo site-logo" aria-label="Интернет-магазин гаджетов «Device»">
-      <svg class="site-logo__img site-logo__img_footer">
-        <use xlink:href="img/svg/icons.svg#device-logo"></use>
-      </svg>
-    </a>
-    <ul class="footer__actions user-actions">
-      <li class="user-actions__login action action_login">
-        <!-- <svg class="action__icon action__icon_footer">
-          <use xlink:href="img/svg/icons.svg#user"></use>
-        </svg> -->
-        <a class="action__link action__link_footer" href="#">Войти</a>
-      </li>
-      <li class="user-actions__compare action action_compare">
-        <!-- <svg class="action__icon action__icon_footer">
-          <use xlink:href="img/svg/icons.svg#compare"></use>
-        </svg> -->
-        <a class="action__link action__link_footer" href="#">Сравнить</a>
-      </li>
-      <li class="user-actions__cart action action_cart">
-        <!-- <svg class="actions__icon action__icon_footer">
-          <use xlink:href="img/svg/icons.svg#cart"></use>
-        </svg> -->
-        <a class="action__link action__link_footer" href="#">Корзина</a>
-      </li>
-    </ul>
-    <address class="footer__address">г. Москва, ул. Строителей, 15</address>
-    <nav class="footer__nav nav" aria-label="Вспомогательная навигация по сайту">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a class="nav__link nav__link_footer" href="#">Доставка</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link nav__link_footer" href="#">Гарантия</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link nav__link_footer" href="#">Контакты</a>
-        </li>
-      </ul>
-    </nav>
-    <p class="footer__phone">Тел.:
-      <a class="footer__phone-link" href="tel:+7(495)495-95-95">+7 (495) 495-95-95</a>
-    </p>
-    <section class="footer__social social">
-      <h2 class="visually-hidden">Наши социальные сети</h2>
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link_fb" href="#" aria-label="Facebook">
-            <svg class="social__icon">
-              <use xlink:href="img/svg/icons.svg#fb"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link_inst" href="#" aria-label="Instagram">
-            <svg class="social__icon">
-              <use xlink:href="img/svg/icons.svg#instagram"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link_tw" href="#" aria-label="Twitter">
-            <svg class="social__icon">
-              <use xlink:href="img/svg/icons.svg#twitter"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </section>
-    <div class="footer__copyright copyright">
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academy">
-        <svg class="copyright__icon" role="img" title="Logo-Html" aria-hidden="true">
-          <use xlink:href="img/svg/icons.svg#logo-html"></use>
+<body class="site">
+  <div class="centered">
+    <header class="site__header header">
+      <div class="header__logo site-logo">
+      <a class="site-logo__link" href="#" aria-label="Логотип интернет-магазина гаджетов «Device»">
+        <svg class="site-logo__img">
+          <use xlink:href="img/svg/icons.svg#device-logo"></use>
         </svg>
       </a>
+    </div>
+      <ul class="header__actions user-actions">
+        <li class="user-actions__search site-search">
+          <form class="site-search__form" method="get">
+            <label class="site-search__label" name="search" for="search-field">
+              <!-- <svg class="site-search__icon">
+                <use xlink:href="img/svg/icons.svg#search"></use>
+              </svg> -->
+            </label>
+            <input class="site-search__field" type="search" id="search-field" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+            <button class="site-search__button">Найти</button>
+          </form>
+        </li>
+        <li class="user-actions__login action action_login">
+          <!-- <svg class="action__icon">
+            <use xlink:href="img/svg/icons.svg#user"></use>
+          </svg> -->
+          <a class="action__link" href="#">Войти</a>
+        </li>
+        <li class="user-actions__compare action action_compare">
+          <!-- <svg class="action__icon">
+            <use xlink:href="img/svg/icons.svg#compare"></use>
+          </svg> -->
+          <a class="action__link" href="#">Сравнить</a>
+        </li>
+        <li class="user-actions__cart action action_cart">
+          <!-- <svg class="actions__icon">
+            <use xlink:href="img/svg/icons.svg#cart"></use>
+          </svg> -->
+          <a class="action__link" href="#">Корзина</a>
+        </li>
+      </ul>
+      <nav class="header__nav nav" aria-label="Главная навигация по сайту">
+        <ul class="nav__list">
+          <li class="nav__item nav__item_expandable">
+            <a class="nav__link" tabindex="0">Каталог товаров</a>
+            <!-- <svg class="nav__icon">
+              <use xlink:href="img/svg/icons.svg#plus"></use>
+            </svg> -->
+            <ul class="nav__sub-list">
+              <li class="nav__sub-item">
+                <a class="nav__sub-link" href="#">Виртуальная реальность</a>
+              </li>
+              <li class="nav__sub-item">
+                <a class="nav__sub-link" href="monopods.html">Моноподы для селфи</a>
+              </li>
+              <li class="nav__sub-item">
+                <a class="nav__sub-link" href="#">Экшн-камеры</a>
+              </li>
+              <li class="nav__sub-item">
+                <a class="nav__sub-link" href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="nav__sub-item">
+                <a class="nav__sub-link" href="#">Умные-часы</a>
+              </li>
+              <li class="nav__sub-item">
+                <a class="nav__sub-link" href="#">Квадрокоптеры</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Доставка</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Гарантия</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+  </div>
+  </header>
+  <main class="site__main main">
+    <div class="centered">
+      <h1 class="visually-hidden">Интернет-магазин гаджетов «Device»</h1>
+      <section class="main__slider slider">
+        <h2 class="visually-hidden">Популярные товары</h2>
+        <ul class="slider__slides-switcher slides-switcher" aria-label="Переключатели слайдов">
+          <li class="slides-switcher__radio">
+            <button class="slides-switcher__btn">Первый слайд</button>
+          </li>
+          <li class="slides-switcher__radio">
+            <button class="slides-switcher__btn">Второй слайд</button>
+          </li>
+          <li class="slides-switcher__radio">
+            <button class="slides-switcher__btn">Третий слайд</button>
+          </li>
+        </ul>
+        <div class="slider__slide-wrapper slide-wrapper">
+          <section class="slide-wrapper__slide slide">
+            <img class="slide__img" src="img/slider/slider-1.png" width="384" height="486" alt="Самая длинная палка для сэлфи">
+            <span class="slide__order" aria-label="Первый слайд">01</span>
+            <h3 class="slide__slogan main-heading">Делай селфи, как Бен Стиллер!</h3>
+            <p class="slide__description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+            <a class="slide__product-link btn" href="#">Подробнее</a>
+            <table class="slide__product-details product-details">
+              <tr class="product-details__row">
+                <td class="product-details__value">8,5 м</td>
+                <td class="product-details__value">5 кг</td>
+                <td class="product-details__value">Карбон</td>
+              </tr>
+              <tr class="product-details__row">
+                <th class="product-details__parameter">Длина палки</th>
+                <th class="product-details__parameter">Вес палки</th>
+                <th class="product-details__parameter">Материал</th>
+              </tr>
+            </table>
+          </section>
+          <section class="slide-wrapper__slide slide">
+            <img class="slide__img" src="img/slider/slider-2.png" width="345" height="485" alt="Мотивирующие фитнесc-браслеты">
+            <span class="slide__order" aria-label="Второй слайд">02</span>
+            <h3 class="slide__slogan main-heading">Худеем правильно!</h3>
+            <p class="slide__description">Мотивирующие фитнесc-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+            <a class="slide__product-link btn" href="#">Подробнее</a>
+            <table class="slide__product-details product-details">
+              <tr class="product-details__value-row">
+                <td class="product-details__value">48 часов</td>
+              </tr>
+              <tr class="product-details__parameter-row">
+                <th class="product-details__parameter">Без подзарядки</th>
+              </tr>
+            </table>
+          </section>
+          <section class="slide-wrapper__slide slide">
+            <img class="slide__img" src="img/slider/slider-3.png" width="526" height="334" alt="Квадрокоптер оснащенные мощным лазером, замаскированным под стандартную камеру">
+            <span class="slide__order" aria-label="Третий слайд">03</span>
+            <h3 class="slide__slogan main-heading">Порхает как бабочка, жалит как пчела!</h3>
+            <p class="slide__description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+            <a class="slide__product-link btn" href="#">Подробнее</a>
+            <table class="slide__product-details product-details">
+              <tr class="product-details__value-row">
+                <td class="product-details__value">800 м</td>
+                <td class="product-details__value">50 м</td>
+              </tr>
+              <tr class="product-details__parameter-row">
+                <th class="product-details__parameter">Дальность полета</th>
+                <th class="product-details__parameter">Радиус поражения</th>
+              </tr>
+            </table>
+          </section>
+        </div>
+      </section>
+      <section class="main__categories categories">
+        <h2 class="visually-hidden">Категории товаров</h2>
+        <div class="categories__wrapper category">
+          <a class="category__link category__link_virtual" href="virtual.html">
+            <svg class="category__link-img">
+              <use xlink:href="img/svg/icons.svg#popular-1"></use>
+            </svg>
+            Виртуальная реальность
+          </a>
+          <a class="category__link category__link_monopod" href="monopods.html">
+            <svg class="category__link-img">
+              <use xlink:href="img/svg/icons.svg#popular-2"></use>
+            </svg>
+            Моноподы для селфи
+          </a>
+          <a class="category__link category__link_camera" href="camera.html">
+            <svg class="category__link-img">
+              <use xlink:href="img/svg/icons.svg#popular-3"></use>
+            </svg>
+            Экшн-камеры
+          </a>
+          <a class="category__link category__link_bracelet" href="bracelet.html">
+            <svg class="category__link-img">
+              <use xlink:href="img/svg/icons.svg#popular-4"></use>
+            </svg>
+            Фитнес-браслеты
+          </a>
+          <a class="category__link category__link_watch" href="watch.html">
+            <svg class="category__link-img">
+              <use xlink:href="img/svg/icons.svg#popular-5"></use>
+            </svg>
+            Умные часы
+          </a>
+          <a class="category__link category__link_quadrocopter" href="quadrocopter.html">
+            <svg class="category__link-img">
+              <use xlink:href="img/svg/icons.svg#popular-6"></use>
+            </svg>
+            Квадрокоптеры
+          </a>
+        </div>
+      </section>
+    </div>
+    <section class="main__services services">
+      <div class="centered">
+        <h2 class="visually-hidden">Наш сервис</h2>
+        <section class="services__content">
+          <a class="services__btn services__btn_curent btn">Доставка</a>
+          <h3 class="services__heading main-heading">Доставка</h3>
+          <p class="services__description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+          <svg class="services__img">
+            <use xlink:href="img/svg/icons.svg#delivery"></use>
+          </svg>
+        </section>
+        <section class="services__content">
+          <a class="services__btn btn">Гарантия</a>
+          <h3 class="services__heading main-heading">Гарантия</h3>
+          <p class="services__description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+          <svg class="services__img">
+            <use xlink:href="img/svg/icons.svg#warranty"></use>
+          </svg>
+        </section>
+        <section class="services__content">
+          <a class="services__btn btn">Кредит</a>
+          <h3 class="services__heading main-heading">Кредит</h3>
+          <p class="services__description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+          <svg class="services__img">
+            <use xlink:href="img/svg/icons.svg#credit"></use>
+          </svg>
+        </section>
+      </div>
+    </section>
+    <div class="centered">
+      <section class="main__brands brands">
+        <h2 class="visually-hidden">Список компаний-производителей продукции в нашем каталоге</h2>
+        <div class="brands__wrapper brand">
+          <a class="brand__link" href="http://www.dji.com/" aria-label="Сайт компании-производителя DJI">
+          <img class="brand__logo" src="img//brands/logo-1.jpg" width="260" height="100" alt="Логотип производителя DJI">
+        </a>
+          <a class="brand__link" href="http://www.sp-gadgets.com/" aria-label="Сайт компании-производителя SPGA">
+          <img class="brand__logo" src="img/brands/logo-2.jpg" width="260" height="100" alt="Логотип производителя SPGA">
+        </a>
+          <a class="brand__link" href="http://gopro.com/" aria-label="Сайт компании-производителя GOPRO">
+          <img class="brand__logo" src="img/brands/logo-3.jpg" width="260" height="100" alt="Логотип производителя GOPRO">
+        </a>
+          <a class="brand__link" href="https://www.htcvive.com/" aria-label="Сайт компании-производителя VIVE">
+          <img class="brand__logo" src="img/brands/logo-4.jpg" width="260" height="100" alt="Логотип производителя VIVE">
+        </a>
+        </div>
+      </section>
+      <div class="main__company-details company-details">
+        <section class="company-details__about-us about-us">
+          <h3 class="about-us__heading main-heading">О нас</h3>
+          <p class="about-us__description">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+          <p class="about-us__description">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями</p>
+          <ul class="about-us__delivery-partners-section delivery-partners">
+            <li class="delivery-partners__item">
+              <a class="delivery-partners__link" href="#">Деловые Линии</a>
+            </li>
+            <li class="delivery-partner__item">
+              <a class="delivery-partners__link" href="#">Автотрейдинг</a>
+            </li>
+            <li class="delivery-partner__item">
+              <a class="delivery-partners__link" href="#">ЖелДорЭкспедиция</a>
+            </li>
+          </ul>
+          <a class="about-us__more-info-link btn" href="#">Подробнее о нас</a>
+        </section>
+        <section class="company-details__contacts contacts">
+          <h3 class="contacts__heading main-heading">Контакты</h3>
+          <p class="contacts__description">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+          <div class="contacts__map map">
+            <img class="map__image" src="img/map.jpg" alt="Наше местоположение на карте">
+          </div>
+          <a class="contacts__contact-link btn" href="#">Напишите нам</a>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="site__footer footer">
+    <div class="centered">
+      <a class="footer__logo site-logo" aria-label="Интернет-магазин гаджетов «Device»">
+        <svg class="site-logo__img site-logo__img_footer">
+          <use xlink:href="img/svg/icons.svg#device-logo"></use>
+        </svg>
+      </a>
+      <ul class="footer__actions user-actions">
+        <li class="user-actions__login action action_login">
+          <svg class="action__icon action__icon_footer">
+            <use xlink:href="img/svg/icons.svg#user"></use>
+          </svg>
+          <a class="action__link action__link_footer" href="#">Войти</a>
+        </li>
+        <li class="user-actions__compare action action_compare">
+          <svg class="action__icon action__icon_footer">
+            <use xlink:href="img/svg/icons.svg#compare"></use>
+          </svg>
+          <a class="action__link action__link_footer" href="#">Сравнить</a>
+        </li>
+        <li class="user-actions__cart action action_cart">
+          <svg class="actions__icon action__icon_footer">
+            <use xlink:href="img/svg/icons.svg#cart"></use>
+          </svg>
+          <a class="action__link action__link_footer" href="#">Корзина</a>
+        </li>
+      </ul>
+      <address class="footer__address">г. Москва, ул. Строителей, 15</address>
+      <nav class="footer__nav nav" aria-label="Вспомогательная навигация по сайту">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link nav__link_footer" href="#">Доставка</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link_footer" href="#">Гарантия</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link_footer" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <p class="footer__phone">Тел.:
+        <a class="footer__phone-link" href="tel:+7(495)495-95-95">+7 (495) 495-95-95</a>
+      </p>
+      <section class="footer__social social">
+        <h2 class="visually-hidden">Наши социальные сети</h2>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link_fb" href="#" aria-label="Facebook">
+              <svg class="social__icon">
+                <use xlink:href="img/svg/icons.svg#fb"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link_inst" href="#" aria-label="Instagram">
+              <svg class="social__icon">
+                <use xlink:href="img/svg/icons.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link_tw" href="#" aria-label="Twitter">
+              <svg class="social__icon">
+                <use xlink:href="img/svg/icons.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <div class="footer__copyright copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academy">
+          <svg class="copyright__icon" role="img" title="Logo-Html" aria-hidden="true">
+            <use xlink:href="img/svg/icons.svg#logo-html"></use>
+          </svg>
+        </a>
+      </div>
     </div>
   </footer>
   <!-- MODAL -->
