@@ -12,50 +12,58 @@
   <div class="centered">
     <header class="site__header header">
       <div class="header__logo site-logo">
-      <a class="site-logo__link" href="#" aria-label="Логотип интернет-магазина гаджетов «Device»">
-        <svg class="site-logo__img">
-          <use xlink:href="img/svg/icons.svg#device-logo"></use>
-        </svg>
-      </a>
-    </div>
-      <ul class="header__actions user-actions">
-        <li class="user-actions__search site-search">
-          <form class="site-search__form" method="get">
-            <label class="site-search__label" name="search" for="search-field">
-              <!-- <svg class="site-search__icon">
-                <use xlink:href="img/svg/icons.svg#search"></use>
-              </svg> -->
-            </label>
-            <input class="site-search__field" type="search" id="search-field" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
-            <button class="site-search__button">Найти</button>
-          </form>
-        </li>
-        <li class="user-actions__login action action_login">
-          <!-- <svg class="action__icon">
-            <use xlink:href="img/svg/icons.svg#user"></use>
-          </svg> -->
-          <a class="action__link" href="#">Войти</a>
-        </li>
-        <li class="user-actions__compare action action_compare">
-          <!-- <svg class="action__icon">
-            <use xlink:href="img/svg/icons.svg#compare"></use>
-          </svg> -->
-          <a class="action__link" href="#">Сравнить</a>
-        </li>
-        <li class="user-actions__cart action action_cart">
-          <!-- <svg class="actions__icon">
-            <use xlink:href="img/svg/icons.svg#cart"></use>
-          </svg> -->
-          <a class="action__link" href="#">Корзина</a>
-        </li>
-      </ul>
+        <a class="site-logo__link" href="#" aria-label="Логотип интернет-магазина гаджетов «Device»">
+          <svg class="site-logo__img">
+            <use xlink:href="img/svg/icons.svg#device-logo"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="header__actions user-actions">
+        <form class="user-actions__search site-search" method="get">
+          <label class="site-search__label" name="search" for="search-field">
+            <svg class="site-search__icon">
+              <use xlink:href="img/svg/icons.svg#search"></use>
+            </svg>
+          </label>
+          <input class="site-search__field" type="search" id="search-field" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+          <button class="site-search__button">Найти</button>
+        </form>
+        <ul class="user-actions__list">
+          <li class="user-actions__login action action_login">
+            <a class="action__link" href="#">
+              <svg class="action__icon icon-login">
+                <use xlink:href="img/svg/icons.svg#user"></use>
+              </svg>
+              <span class="action__text">Войти</span>
+            </a>
+          </li>
+          <li class="user-actions__compare action action_compare">
+            <a class="action__link" href="#">
+              <svg class="action__icon icon-compare">
+                <use xlink:href="img/svg/icons.svg#compare"></use>
+              </svg>
+              <span class="action__text">Сравнить</span>
+            </a>
+          </li>
+          <li class="user-actions__cart action action_cart">
+            <a class="action__link" href="#">
+              <svg class="action__icon icon-cart">
+                <use xlink:href="img/svg/icons.svg#cart"></use>
+              </svg>
+              <span class="action__text">Корзина</span>
+            </a>
+          </li>
+        </ul>
+      </div>
       <nav class="header__nav nav" aria-label="Главная навигация по сайту">
         <ul class="nav__list">
           <li class="nav__item nav__item_expandable">
-            <a class="nav__link" tabindex="0">Каталог товаров</a>
-            <!-- <svg class="nav__icon">
-              <use xlink:href="img/svg/icons.svg#plus"></use>
-            </svg> -->
+            <a class="nav__link" tabindex="0">
+              <span class="nav__item-name">Каталог товаров</span>
+              <svg class="nav__icon">
+                <use xlink:href="img/svg/icons.svg#plus"></use>
+              </svg>
+            </a>
             <ul class="nav__sub-list">
               <li class="nav__sub-item">
                 <a class="nav__sub-link" href="#">Виртуальная реальность</a>

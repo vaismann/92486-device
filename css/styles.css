@@ -22,6 +22,7 @@
   font-style: normal;
 }
 
+
 /* 
  .d8888b.  888          888               888 
 d88P  Y88b 888          888               888 
@@ -91,6 +92,8 @@ Y88b  d88P 888 Y88..88P 888 d88P 888  888 888
   padding: 0 20px;
   box-sizing: border-box;
 }
+
+
 /* 
 888    888                        888                  
 888    888                        888                  
@@ -106,69 +109,116 @@ Y88b  d88P 888 Y88..88P 888 d88P 888  888 888
   display: flex;
   flex-direction: column;
   padding: 0 50px;
+  padding-bottom: 147px;
   line-height: 36px;
   background-color: rgba(247, 226, 150, 1);
-
 }
 
 .header__logo {
-  margin-bottom: 30px;
+  margin-top: -28px;
+  margin-bottom: -14px;
 }
 
-.site-logo__link {
-  padding: 10px;
-  height: 37px;
-  position: absolute;
-  top: 12px;
+.header__actions {
+  margin-bottom: 5px;
 }
 
-.site-logo__link:hover, .site-logo__link:focus {
-  opacity: 0.6;
-}
-
-.site-logo__link:active {
-  opacity: 0.3;
-  outline: none;
-}
 
 .site-logo__img {
+  padding: 10px;
   width: 163px;
-  height: 37px;
-  margin-bottom: 40px;
-
+  height: 35px;
 }
 
 .user-actions {
   display: flex;
-  padding-left: 10px;
-  list-style: none;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0 10px;
 }
 
-.user-actions__search {
+.user-actions__list {
+  display: flex;
+  list-style: none;
 
 }
 
 .site-search {
-  
-
-
+  position: relative;
 }
 
 .site-search__label {
-
+  position: relative;
 }
 
 .site-search__icon {
-
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
 }
 
 .site-search__field {
+  width: 355px;
+  padding-left: 39px;
+  padding-bottom: 14px;
+  color: rgba(1, 1, 1, 0.3);
+  background: none;
   border: none;
-  background-color: rgba(247, 226, 150, 1);
 }
 
-.action {
+.site-search__field:hover {
+  color: rgba(1, 1, 1, 0.6);
+}
 
+.site-search__field:active, .site-search__field:focus {
+  color: rgba(1, 1, 1, 1);
+  border-bottom: 2px solid black;
+}
+
+.site-search__button {
+  display: none;
+  padding: 14px 18px;
+  background: none;
+  border: 2px solid black;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+.site-search__button:hover {
+  background-color: rgba(1 , 1, 1, 1);
+  color: rgba(250, 250 ,250, 1);
+}
+
+.site-search__button:active {
+  background-color: rgba(1 , 1, 1, 1);
+  color: rgba(250, 250 ,250, 0.3);
+}
+
+.site-search__field:active + .site-search__button, .site-search__field:focus + .site-search__button {
+  display: inline-block;
+}
+
+.user-actions__login {
+  margin-right: 222px;
+}
+
+.user-actions__compare {
+  margin-right: 41px;
+}
+
+.user-actions__cart {
+  margin-right: 0;
+}
+
+.action:hover {
+  opacity: 0.6;
+}
+
+.action:active {
+  opacity: 0.3;
 }
 
 .action__link {
@@ -176,24 +226,77 @@ Y88b  d88P 888 Y88..88P 888 d88P 888  888 888
   text-decoration: none;
 }
 
+.icon-login {
+  width: 13px;
+  height: 12px;
+}
+
+.icon-compare {
+  width: 10px;
+  height: 10px;
+}
+
+.icon-cart {
+  width: 12px;
+  height: 12px;
+}
+
+.action__text {
+  padding-left: 6px;
+}
+
 .nav {
   font-family: 'Gilroy Extra Bold';
+  font-size: 18px;
+
   text-transform: uppercase;
 }
 
 .nav__list {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
+.nav__item {
+  padding: 10px;
+}
+
+.nav__item:nth-child(2) {
+  margin-right: 15px;
+}
+
+.nav__item:nth-child(3) {
+  margin-right: 85px;
+}
+
+.nav__item_expandable {
+  flex-grow: 2;
+}
+
+.nav__item-name {
+  margin-right: 3px;
+}
 .nav__link {
   color: rgba(0, 0, 0, 1);
   text-decoration: none;
-  letter-spacing: 3px;
+  letter-spacing: 0.2em;
+}
+
+.nav__icon {
+  width: 16px;
+  height: 16px;
+  opacity: 0.3;
 }
 
 .nav__sub-list {
+  display: none;
   list-style: none;
   font-family: 'Open Sans Light';
+  font-size: 15px;
+  line-height: 36px;
   text-transform: none;
 }
 
@@ -201,6 +304,7 @@ Y88b  d88P 888 Y88..88P 888 d88P 888  888 888
   color: rgba(0, 0, 0, 1);
   text-decoration: none;
 }
+
 
 /* 
 888888b.                              
@@ -220,6 +324,7 @@ Y88b  d88P 888 Y88..88P 888 d88P 888  888 888
 .services {
   background-color: rgba(229, 229, 229, 1);
 }
+
 .product-details__value {
   font-family: 'Gilroy Light';
   font-size: 36px;
@@ -340,6 +445,7 @@ Y88b  d88P 888 Y88..88P 888 d88P 888  888 888
 .pagination__control-link_current {
   color: rgba(0, 0, 0, 1);
 }
+
 
 /* 
 8888888888                   888                     
