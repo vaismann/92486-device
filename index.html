@@ -17,15 +17,17 @@
         </svg>
       </a>
       <div class="header__actions user-actions">
-        <form class="user-actions__search site-search" method="get">
-          <label class="site-search__label" name="search" for="search-field">
-            <svg class="site-search__icon">
-              <use xlink:href="img/svg/icons.svg#search"></use>
-            </svg>
-          </label>
-          <input class="site-search__field" type="search" id="search-field" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
-          <button class="site-search__button">Найти</button>
-        </form>
+        <div class="user-actions__search">
+          <form class="site-search" method="get">
+            <label class="site-search__label" name="search" for="search-field">
+              <svg class="site-search__icon">
+                <use xlink:href="img/svg/icons.svg#search"></use>
+              </svg>
+            </label>
+            <input class="site-search__field" type="search" id="search-field" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+            <button class="site-search__button">Найти</button>
+          </form>
+        </div>
         <ul class="user-actions__list">
           <li class="user-actions__login action action_login">
             <a class="action__link" href="#">
@@ -120,7 +122,8 @@
             <div class="slide__info-wrapper">
               <span class="slide__order" aria-label="Первый слайд">01</span>
               <h3 class="slide__slogan main-heading">Делай селфи,<br> как Бен Стиллер!</h3>
-              <p class="slide__description">Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+              <p class="slide__description">Самая длинная палка для селфи доступна в нашем магазине.
+                <br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
               <a class="slide__product-link btn" href="#">Подробнее</a>
               <table class="slide__product-details product-details">
                 <tr class="product-details__row">
@@ -136,7 +139,7 @@
               </table>
             </div>
           </section>
-<!--           <section class="slide-wrapper__slide slide">
+          <!--           <section class="slide-wrapper__slide slide">
             <div class="slide__img-wrapper">
               <img class="slide__img" src="img/slider/slider-2.png" width="345" height="485" alt="Мотивирующие фитнесc-браслеты">
             </div>
@@ -182,40 +185,52 @@
         <h2 class="visually-hidden">Категории товаров</h2>
         <div class="categories__wrapper category">
           <a class="category__link category__link_virtual" href="virtual.html">
-            <svg class="category__link-img">
-              <use xlink:href="img/svg/icons.svg#popular-1"></use>
-            </svg>
-            Виртуальная реальность
+            <div class="box">
+              <svg class="category__link-img category__link-img_virtual">
+                <use xlink:href="img/svg/icons.svg#popular-1"></use>
+              </svg>
+            </div>
+            <span class="category__link-text">Виртуальная реальность</span>
           </a>
           <a class="category__link category__link_monopod" href="monopods.html">
-            <svg class="category__link-img">
-              <use xlink:href="img/svg/icons.svg#popular-2"></use>
-            </svg>
-            Моноподы для селфи
+            <div class="box">
+              <svg class="category__link-img category__link-img_monopod">
+                <use xlink:href="img/svg/icons.svg#popular-2"></use>
+              </svg>
+            </div>
+            <span class="category__link-text">Моноподы <br> для селфи</span>
           </a>
           <a class="category__link category__link_camera" href="camera.html">
-            <svg class="category__link-img">
-              <use xlink:href="img/svg/icons.svg#popular-3"></use>
-            </svg>
-            Экшн-камеры
+            <div class="box">
+              <svg class="category__link-img category__link-img_camera">
+                <use xlink:href="img/svg/icons.svg#popular-3"></use>
+              </svg>
+            </div>
+            <span class="category__link-text">Экшн-камеры</span>
           </a>
           <a class="category__link category__link_bracelet" href="bracelet.html">
-            <svg class="category__link-img">
-              <use xlink:href="img/svg/icons.svg#popular-4"></use>
-            </svg>
-            Фитнес-браслеты
+            <div class="box">
+              <svg class="category__link-img category__link-img_bracelet">
+                <use xlink:href="img/svg/icons.svg#popular-4"></use>
+              </svg>
+            </div>
+            <span class="category__link-text">Фитнес-браслеты</span>
           </a>
           <a class="category__link category__link_watch" href="watch.html">
-            <svg class="category__link-img">
-              <use xlink:href="img/svg/icons.svg#popular-5"></use>
-            </svg>
-            Умные часы
+            <div class="box">
+              <svg class="category__link-img category__link-img_watch">
+                <use xlink:href="img/svg/icons.svg#popular-5"></use>
+              </svg>
+            </div>
+            <span class="category__link-text">Умные часы</span>
           </a>
           <a class="category__link category__link_quadrocopter" href="quadrocopter.html">
-            <svg class="category__link-img">
-              <use xlink:href="img/svg/icons.svg#popular-6"></use>
-            </svg>
-            Квадрокоптеры
+            <div class="box">
+              <svg class="category__link-img category__link-img_quadrocopter">
+                <use xlink:href="img/svg/icons.svg#popular-6"></use>
+              </svg>
+            </div>
+            <span class="category__link-text">Квадрокоптеры</span>
           </a>
         </div>
       </section>
@@ -305,22 +320,28 @@
       </a>
       <ul class="footer__actions user-actions">
         <li class="user-actions__login action action_login">
-          <svg class="action__icon action__icon_footer">
-            <use xlink:href="img/svg/icons.svg#user"></use>
-          </svg>
-          <a class="action__link action__link_footer" href="#">Войти</a>
+          <a class="action__link" href="#">
+            <svg class="action__icon icon-login icon-login_footer">
+              <use xlink:href="img/svg/icons.svg#user"></use>
+            </svg>
+            <span class="action__text">Войти</span>
+          </a>
         </li>
         <li class="user-actions__compare action action_compare">
-          <svg class="action__icon action__icon_footer">
-            <use xlink:href="img/svg/icons.svg#compare"></use>
-          </svg>
-          <a class="action__link action__link_footer" href="#">Сравнить</a>
+          <a class="action__link" href="#">
+            <svg class="action__icon icon-compare icon-compare_footer">
+              <use xlink:href="img/svg/icons.svg#compare"></use>
+            </svg>
+            <span class="action__text">Сравнить</span>
+          </a>
         </li>
         <li class="user-actions__cart action action_cart">
-          <svg class="actions__icon action__icon_footer">
-            <use xlink:href="img/svg/icons.svg#cart"></use>
-          </svg>
-          <a class="action__link action__link_footer" href="#">Корзина</a>
+          <a class="action__link" href="#">
+            <svg class="action__icon icon-cart icon-cart_footer">
+              <use xlink:href="img/svg/icons.svg#cart"></use>
+            </svg>
+            <span class="action__text">Корзина</span>
+          </a>
         </li>
       </ul>
       <address class="footer__address">г. Москва, ул. Строителей, 15</address>
