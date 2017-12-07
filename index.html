@@ -11,13 +11,11 @@
 <body class="site">
   <div class="centered">
     <header class="site__header header">
-      <div class="header__logo site-logo">
-        <a class="site-logo__link" href="#" aria-label="Логотип интернет-магазина гаджетов «Device»">
-          <svg class="site-logo__img">
-            <use xlink:href="img/svg/icons.svg#device-logo"></use>
-          </svg>
-        </a>
-      </div>
+      <a class="header__logo site-logo" href="#" aria-label="Логотип интернет-магазина гаджетов «Device»">
+        <svg class="site-logo__img">
+          <use xlink:href="img/svg/icons.svg#device-logo"></use>
+        </svg>
+      </a>
       <div class="header__actions user-actions">
         <form class="user-actions__search site-search" method="get">
           <label class="site-search__label" name="search" for="search-field">
@@ -57,14 +55,14 @@
       </div>
       <nav class="header__nav nav" aria-label="Главная навигация по сайту">
         <ul class="nav__list">
-          <li class="nav__item nav__item_expandable">
-            <a class="nav__link" tabindex="0">
+          <li class="nav__item nav__item_catalog">
+            <a class="nav__link" href="#" tabindex="0">
               <span class="nav__item-name">Каталог товаров</span>
               <svg class="nav__icon">
                 <use xlink:href="img/svg/icons.svg#plus"></use>
               </svg>
             </a>
-            <ul class="nav__sub-list">
+            <ul class="nav__sub-list nav__sub-list_hidden">
               <li class="nav__sub-item">
                 <a class="nav__sub-link" href="#">Виртуальная реальность</a>
               </li>
@@ -85,13 +83,13 @@
               </li>
             </ul>
           </li>
-          <li class="nav__item">
+          <li class="nav__item nav__item_delivery">
             <a class="nav__link" href="#">Доставка</a>
           </li>
-          <li class="nav__item">
+          <li class="nav__item nav__item_warranty">
             <a class="nav__link" href="#">Гарантия</a>
           </li>
-          <li class="nav__item">
+          <li class="nav__item nav__item_contacts">
             <a class="nav__link" href="#">Контакты</a>
           </li>
         </ul>
@@ -103,7 +101,7 @@
       <h1 class="visually-hidden">Интернет-магазин гаджетов «Device»</h1>
       <section class="main__slider slider">
         <h2 class="visually-hidden">Популярные товары</h2>
-        <ul class="slider__slides-switcher slides-switcher" aria-label="Переключатели слайдов">
+        <!--         <ul class="slider__slides-switcher slides-switcher" aria-label="Переключатели слайдов">
           <li class="slides-switcher__radio">
             <button class="slides-switcher__btn">Первый слайд</button>
           </li>
@@ -113,59 +111,71 @@
           <li class="slides-switcher__radio">
             <button class="slides-switcher__btn">Третий слайд</button>
           </li>
-        </ul>
+        </ul> -->
         <div class="slider__slide-wrapper slide-wrapper">
           <section class="slide-wrapper__slide slide">
-            <img class="slide__img" src="img/slider/slider-1.png" width="384" height="486" alt="Самая длинная палка для сэлфи">
-            <span class="slide__order" aria-label="Первый слайд">01</span>
-            <h3 class="slide__slogan main-heading">Делай селфи, как Бен Стиллер!</h3>
-            <p class="slide__description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-            <a class="slide__product-link btn" href="#">Подробнее</a>
-            <table class="slide__product-details product-details">
-              <tr class="product-details__row">
-                <td class="product-details__value">8,5 м</td>
-                <td class="product-details__value">5 кг</td>
-                <td class="product-details__value">Карбон</td>
-              </tr>
-              <tr class="product-details__row">
-                <th class="product-details__parameter">Длина палки</th>
-                <th class="product-details__parameter">Вес палки</th>
-                <th class="product-details__parameter">Материал</th>
-              </tr>
-            </table>
+            <div class="slide__img-wrapper">
+              <img class="slide__img" src="img/slider/slider-1.png" width="384" height="486" alt="Самая длинная палка для сэлфи">
+            </div>
+            <div class="slide__info-wrapper">
+              <span class="slide__order" aria-label="Первый слайд">01</span>
+              <h3 class="slide__slogan main-heading">Делай селфи,<br> как Бен Стиллер!</h3>
+              <p class="slide__description">Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+              <a class="slide__product-link btn" href="#">Подробнее</a>
+              <table class="slide__product-details product-details">
+                <tr class="product-details__row">
+                  <td class="product-details__value">8,5 м</td>
+                  <td class="product-details__value">5 кг</td>
+                  <td class="product-details__value">Карбон</td>
+                </tr>
+                <tr class="product-details__row">
+                  <th class="product-details__parameter">Длина палки</th>
+                  <th class="product-details__parameter">Вес палки</th>
+                  <th class="product-details__parameter">Материал</th>
+                </tr>
+              </table>
+            </div>
+          </section>
+<!--           <section class="slide-wrapper__slide slide">
+            <div class="slide__img-wrapper">
+              <img class="slide__img" src="img/slider/slider-2.png" width="345" height="485" alt="Мотивирующие фитнесc-браслеты">
+            </div>
+            <div class="slide__info-wrapper">
+              <span class="slide__order" aria-label="Второй слайд">02</span>
+              <h3 class="slide__slogan main-heading">Худеем правильно!</h3>
+              <p class="slide__description">Мотивирующие фитнесc-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+              <a class="slide__product-link btn" href="#">Подробнее</a>
+              <table class="slide__product-details product-details">
+                <tr class="product-details__value-row">
+                  <td class="product-details__value">48 часов</td>
+                </tr>
+                <tr class="product-details__parameter-row">
+                  <th class="product-details__parameter">Без подзарядки</th>
+                </tr>
+              </table>
+            </div>
           </section>
           <section class="slide-wrapper__slide slide">
-            <img class="slide__img" src="img/slider/slider-2.png" width="345" height="485" alt="Мотивирующие фитнесc-браслеты">
-            <span class="slide__order" aria-label="Второй слайд">02</span>
-            <h3 class="slide__slogan main-heading">Худеем правильно!</h3>
-            <p class="slide__description">Мотивирующие фитнесc-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-            <a class="slide__product-link btn" href="#">Подробнее</a>
-            <table class="slide__product-details product-details">
-              <tr class="product-details__value-row">
-                <td class="product-details__value">48 часов</td>
-              </tr>
-              <tr class="product-details__parameter-row">
-                <th class="product-details__parameter">Без подзарядки</th>
-              </tr>
-            </table>
-          </section>
-          <section class="slide-wrapper__slide slide">
-            <img class="slide__img" src="img/slider/slider-3.png" width="526" height="334" alt="Квадрокоптер оснащенные мощным лазером, замаскированным под стандартную камеру">
-            <span class="slide__order" aria-label="Третий слайд">03</span>
-            <h3 class="slide__slogan main-heading">Порхает как бабочка, жалит как пчела!</h3>
-            <p class="slide__description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-            <a class="slide__product-link btn" href="#">Подробнее</a>
-            <table class="slide__product-details product-details">
-              <tr class="product-details__value-row">
-                <td class="product-details__value">800 м</td>
-                <td class="product-details__value">50 м</td>
-              </tr>
-              <tr class="product-details__parameter-row">
-                <th class="product-details__parameter">Дальность полета</th>
-                <th class="product-details__parameter">Радиус поражения</th>
-              </tr>
-            </table>
-          </section>
+            <div class="slide__img-wrapper">
+              <img class="slide__img" src="img/slider/slider-3.png" width="526" height="334" alt="Квадрокоптер оснащенные мощным лазером, замаскированным под стандартную камеру">
+            </div>
+            <div class="slide__info-wrapper">
+              <span class="slide__order" aria-label="Третий слайд">03</span>
+              <h3 class="slide__slogan main-heading">Порхает как бабочка, жалит как пчела!</h3>
+              <p class="slide__description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+              <a class="slide__product-link btn" href="#">Подробнее</a>
+              <table class="slide__product-details product-details">
+                <tr class="product-details__value-row">
+                  <td class="product-details__value">800 м</td>
+                  <td class="product-details__value">50 м</td>
+                </tr>
+                <tr class="product-details__parameter-row">
+                  <th class="product-details__parameter">Дальность полета</th>
+                  <th class="product-details__parameter">Радиус поражения</th>
+                </tr>
+              </table>
+            </div>
+          </section> -->
         </div>
       </section>
       <section class="main__categories categories">

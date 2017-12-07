@@ -35,8 +35,6 @@ Y88b  d88P 888 Y88..88P 888 d88P 888  888 888
 */
 
 .site {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   min-height: 100vh;
   margin: 0;
@@ -44,18 +42,15 @@ Y88b  d88P 888 Y88..88P 888 d88P 888  888 888
 
   font-family: 'Open Sans Light', Arial, sans-serif;
   font-size: 15px;
-  line-height: 30px;
+  line-height: 2em;
   color: rgba(70, 70, 70, 1);
-
-  background-color: white;
 }
 
 .site__header {
   margin-top: 40px;
 }
 
-
-.visuallyhidden:not(:focus):not(:active) {
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
 
   width: 1px;
@@ -66,10 +61,16 @@ Y88b  d88P 888 Y88..88P 888 d88P 888  888 888
 
   white-space: nowrap;
 
+  -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
 
 .btn {
   font-family: 'Gilroy Extra Bold';
@@ -83,14 +84,16 @@ Y88b  d88P 888 Y88..88P 888 d88P 888  888 888
 .main-heading {
   font-family: 'Gilroy Extra Bold';
   font-size: 47px;
+  line-height: 1.2em;
+  letter-spacing: .02em;
   color: rgba(0, 0, 0, 1);
 }
 
 .centered {
-  width: 1200px;
+  width: 1160px;
   margin: 0 auto;
   padding: 0 20px;
-  box-sizing: border-box;
+
 }
 
 
@@ -106,54 +109,54 @@ Y88b  d88P 888 Y88..88P 888 d88P 888  888 888
 */
 
 .header {
-  display: flex;
-  flex-direction: column;
-  padding: 0 50px;
-  padding-bottom: 147px;
-  line-height: 36px;
-  background-color: rgba(247, 226, 150, 1);
+  padding: 0 55px 50px;
+  min-height: 250px;
+  background-color: rgba(240, 197, 46, 0.5);
 }
 
 .header__logo {
+  display: inline-block;
   margin-top: -28px;
-  margin-bottom: -14px;
+}
+
+.site-logo {
+  height: 45px;
+}
+
+.site-logo__img {
+  padding: 5px;
+  width: 163px;
+  height: 35px;
 }
 
 .header__actions {
-  margin-bottom: 5px;
-}
-
-
-.site-logo__img {
-  padding: 10px;
-  width: 163px;
-  height: 35px;
+  margin-bottom: 15px;
 }
 
 .user-actions {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  padding: 0 10px;
+  flex-wrap: wrap;
+  padding: 0 5px;
+  list-style: none;
 }
 
-.user-actions__list {
-  display: flex;
-  list-style: none;
-
+.user-actions__search {
+  position: relative;
+  flex-grow: 1;
 }
 
 .site-search {
-  position: relative;
+  flex-basis: 440px;
 }
-
 .site-search__label {
   position: relative;
 }
 
 .site-search__icon {
   position: absolute;
-  top: 3px;
+  top: 1px;
   left: 3px;
   width: 16px;
   height: 16px;
@@ -161,56 +164,82 @@ Y88b  d88P 888 Y88..88P 888 d88P 888  888 888
 
 .site-search__field {
   width: 355px;
-  padding-left: 39px;
-  padding-bottom: 14px;
+  height: 43px;
+  padding-left: 40px;
   color: rgba(1, 1, 1, 0.3);
   background: none;
   border: none;
 }
 
-.site-search__field:hover {
+.site-search__field:active, 
+.site-search__field:focus {
+  border-bottom: 2px solid rgba(1, 1, 1, 1);
+  outline: none;
+}
+
+.site-search__field::-webkit-input-placeholder {
+  color: rgba(1, 1, 1, 0.3);
+}
+.site-search__field:hover::-webkit-input-placeholder {
   color: rgba(1, 1, 1, 0.6);
 }
 
-.site-search__field:active, .site-search__field:focus {
+.site-search__field:active::-webkit-input-placeholder, 
+.site-search__field:focus::-webkit-input-placeholder {
   color: rgba(1, 1, 1, 1);
-  border-bottom: 2px solid black;
 }
 
 .site-search__button {
+  position: absolute;
+  top: -6px;
+  left: 355px;
+
   display: none;
   padding: 14px 18px;
   background: none;
   border: 2px solid black;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
   border-radius: 0px;
+  cursor: pointer;
+  letter-spacing: 0.02em;
 }
 
-.site-search__button:hover {
+.site-search__field:active + .site-search__button,
+.site-search__field:focus + .site-search__button {
+  display: inline-block;
+}
+
+.site-search__field:focus + .site-search__button:hover,
+.site-search__field:active + .site-search__button:hover {
   background-color: rgba(1 , 1, 1, 1);
   color: rgba(250, 250 ,250, 1);
 }
 
-.site-search__button:active {
+.site-search__field:focus + .site-search__button:active, 
+.site-search__field:active + .site-search__button:active {
   background-color: rgba(1 , 1, 1, 1);
   color: rgba(250, 250 ,250, 0.3);
 }
 
-.site-search__field:active + .site-search__button, .site-search__field:focus + .site-search__button {
-  display: inline-block;
+.user-actions__list {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  list-style: none;
 }
 
 .user-actions__login {
-  margin-right: 222px;
+  flex-grow: 1;
+  margin-right: 162px;
 }
 
 .user-actions__compare {
-  margin-right: 41px;
+margin-right: 43px; 
+
 }
 
 .user-actions__cart {
-  margin-right: 0;
+  margin-left: auto;
 }
 
 .action:hover {
@@ -224,6 +253,10 @@ Y88b  d88P 888 Y88..88P 888 d88P 888  888 888
 .action__link {
   color: rgba(0, 0, 0, 1);
   text-decoration: none;
+}
+
+.action__text {
+  padding-left: 6px;
 }
 
 .icon-login {
@@ -241,41 +274,52 @@ Y88b  d88P 888 Y88..88P 888 d88P 888  888 888
   height: 12px;
 }
 
-.action__text {
-  padding-left: 6px;
+.header__nav {
+  margin-bottom: 0;
 }
 
 .nav {
   font-family: 'Gilroy Extra Bold';
   font-size: 18px;
-
   text-transform: uppercase;
 }
 
 .nav__list {
   display: flex;
   justify-content: flex-start;
+  align-items: baseline;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .nav__item {
-  padding: 10px;
+  padding: 5px 0 5px 5px;
 }
 
-.nav__item:nth-child(2) {
-  margin-right: 15px;
+.nav__item:hover {
+  opacity: 0.6;
 }
 
-.nav__item:nth-child(3) {
-  margin-right: 85px;
+.nav__item:active {
+  opacity: 0.3;
+}
+.nav__item_catalog {
+  flex-grow: 1;
+  flex-basis: auto;
+  cursor: pointer;
+}
+.nav__item_delivery {
+  margin-right: 29px;
 }
 
-.nav__item_expandable {
-  flex-grow: 2;
+.nav__item_warranty {
+  margin-right: 105px;
 }
 
+.nav__item_contacts {
+  margin-left: auto;
+}
 .nav__item-name {
   margin-right: 3px;
 }
@@ -292,12 +336,19 @@ Y88b  d88P 888 Y88..88P 888 d88P 888  888 888
 }
 
 .nav__sub-list {
-  display: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
   list-style: none;
   font-family: 'Open Sans Light';
   font-size: 15px;
   line-height: 36px;
   text-transform: none;
+}
+
+.nav__sub-list_hidden {
+  display: none;
 }
 
 .nav__sub-link {
@@ -319,6 +370,72 @@ Y88b  d88P 888 Y88..88P 888 d88P 888  888 888
 
 .main {
   width: 100%;
+}
+
+.main__slider {
+  margin-top: -112px;
+  margin-bottom: 200px;
+}
+
+.slider {
+  padding: 0 55px 50px;
+  
+}
+
+.slide__img-wrapper {
+  position: relative;
+  width: 520px;
+}
+
+.slide__img {
+  position: absolute;
+  left: 35px;
+}
+.slide-wrapper__slide {
+
+}
+.slide__info-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 520px;
+  margin-left: auto;
+
+}
+
+.slide__order {
+  position: absolute;
+  right: -6px;
+  top: -11px;
+  font-family: 'Gilroy Extra Bold';
+  font-size: 179px;
+  line-height: 1em;
+  color: rgba(255, 255, 255, 1);
+}
+
+.slide__order::before {
+  content: '';
+  
+  position: absolute;
+  right: 410px;
+  top: 49px;
+  width: 100px;
+  height: 7px;
+  color: white;
+  background-color: white;
+}
+
+.slide__slogan {
+  margin-top: 81px;
+  margin-left: 13px;
+  margin-bottom: 2px;
+  z-index: 1;
+}
+
+.slide__description {
+  flex-basis: 100px;
+  margin-left: 15px;
+  letter-spacing: 0.01em;
 }
 
 .services {
