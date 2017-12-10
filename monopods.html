@@ -145,24 +145,49 @@
               <legend class="filters__legend filters__legend_color">Цвет</legend>
               <ul class="filters__options">
                 <li class="filters__option option">
-                  <input class="visually-hidden option__input" type="checkbox" id="filter-black-colour" checked>
-                  <label class="option__label option__label_checkbox" for="filter-black-colour">Черный</label>
+                  <input class="option__input" type="checkbox" id="filter-black-colour" checked>
+                  <label class="option__label option__label_checkbox" for="filter-black-colour">
+                    <svg class="option__icon">
+                      <use xlink:href="img/svg/icons.svg#tick"></use>
+                    </svg>
+                    <span class="option__label-text">Черный</span>
+                  </label>
                 </li>
                 <li class="filters__option option">
-                  <input class="visually-hidden option__input" type="checkbox" id="filter-white-colour">
-                  <label class="option__label" for="filter-white-colour">Белый</label>
+                  <input class="option__input" type="checkbox" id="filter-white-colour">
+                  <label class="option__label" for="filter-white-colour">
+                    <svg class="option__icon">
+                      <use xlink:href="img/svg/icons.svg#tick"></use>
+                    </svg>
+                    <span class="option__label-text">Белый</span>
+                  </label>
                 </li>
                 <li class="filters__option option">
-                  <input class="visually-hidden option__input" type="checkbox" id="filter-blue-colour">
-                  <label class="option__label" for="filter-blue-colour">Синий</label>
+                  <input class="option__input" type="checkbox" id="filter-blue-colour" checked>
+                  <label class="option__label" for="filter-blue-colour">
+                    <svg class="option__icon">
+                      <use xlink:href="img/svg/icons.svg#tick"></use>
+                    </svg>
+                    <span class="option__label-text">Синий</span>
+                  </label>
                 </li>
                 <li class="filters__option option">
-                  <input class="visually-hidden option__input" type="checkbox" id="filter-red-colour">
-                  <label class="option__label" for="filter-red-colour">Красный</label>
+                  <input class="option__input" type="checkbox" id="filter-red-colour" checked>
+                  <label class="option__label" for="filter-red-colour">
+                    <svg class="option__icon">
+                      <use xlink:href="img/svg/icons.svg#tick"></use>
+                    </svg>
+                    <span class="option__label-text">Красный</span>
+                  </label>
                 </li>
                 <li class="filters__option option">
-                  <input class="visually-hidden option__input" type="checkbox" id="filter-rose-colour">
-                  <label class="option__label" for="filter-rose-colour">Розовый</label>
+                  <input class="option__input" type="checkbox" id="filter-rose-colour">
+                  <label class="option__label" for="filter-rose-colour">
+                    <svg class="option__icon">
+                      <use xlink:href="img/svg/icons.svg#tick"></use>
+                    </svg>
+                    <span class="option__label-text">Розовый</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -172,11 +197,17 @@
               <ul class="filters__options option">
                 <li class="filters__option option">
                   <input class="visually-hidden option__input" type="radio" name="radio" id="yes" checked>
-                  <label class="option__label" for="yes">Есть</label>
+                  <label class="option__radio" for="yes">
+                  <span class="option__inner-radio"></span>
+                  <span class="option__label-text">Есть</span>
+                </label>
                 </li>
                 <li class="filters__option option">
                   <input class="visually-hidden option__input" type="radio" name="radio" id="no">
-                  <label class="option__label" for="no">Нет</label>
+                  <label class="option__radio" for="no">
+                  <span class="option__inner-radio"></span>
+                    <span class="option__label-text">Нет</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -203,44 +234,44 @@
           </div>
           <div class="product-cards__inner">
             <article class="product-cards__card product">
+              <img class="product__photo" src="img/products/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
               <div class="product__info">
                 <h4 class="product__name">Любительская селфи-палка</h4>
                 <p class="product__price">500 руб.</p>
               </div>
-              <img class="product__photo" src="img/products/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
               <div class="product__buy-box">
                 <a class="product__buy-btn btn">В корзину</a>
                 <a class="product__compare-btn">Добавить к сравнению</a>
               </div>
             </article>
             <article class="product-cards__card product">
+              <img class="product__photo" src="img/products/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
               <div class="product__info">
                 <h4 class="product__name">Профессиональная селфи-палка</h4>
                 <p class="product__price">1 500 руб.</p>
               </div>
-              <img class="product__photo" src="img/products/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
               <div class="product__buy-box">
                 <a class="product__buy-btn btn">В корзину</a>
                 <a class="product__compare-btn">Добавить к сравнению</a>
               </div>
             </article>
             <article class="product-cards__card product">
+              <img class="product__photo" src="img/products/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
               <div class="product__info">
                 <h4 class="product__name">Непотопляемая селфи-палка</h4>
                 <p class="product__price">2 500 руб.</p>
               </div>
-              <img class="product__photo" src="img/products/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
               <div class="product__buy-box">
                 <a class="product__buy-btn btn">В корзину</a>
                 <a class="product__compare-btn">Добавить к сравнению</a>
               </div>
             </article>
             <article class="product-cards__card product">
+              <img class="product__photo" src="img/products/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
               <div class="product__info">
                 <h4 class="product__name">Селфи-палка «Следуй за мной»</h4>
                 <p class="product__price">4 900 руб.</p>
               </div>
-              <img class="product__photo" src="img/products/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
               <div class="product__buy-box">
                 <a class="product__buy-btn btn">В корзину</a>
                 <a class="product__compare-btn">Добавить к сравнению</a>
@@ -249,9 +280,11 @@
           </div>
           <div class="main__catalog-pagination pagination" aria-label="Переключение страниц с карточками товаров">
             <a class="pagination__link pagination__link_direction" href="#" aria-label="Переход на предыдущую страницу">Назад</a>
-            <a class="pagination__link pagination__link_current" href="#" aria-label="Первая страница">1</a>
-            <a class="pagination__link" href="#" aria-label="Вторая страница">2</a>
-            <a class="pagination__link" href="#" aria-label="Третья страница">3</a>
+            <div class="pagination__pages">
+              <a class="pagination__link pagination__link_current" href="#" aria-label="Первая страница">1</a>
+              <a class="pagination__link" href="#" aria-label="Вторая страница">2</a>
+              <a class="pagination__link" href="#" aria-label="Третья страница">3</a>
+            </div>
             <a class="pagination__link pagination__link_direction" href="#" aria-label="Переход на следующую страницу">Вперед</a>
           </div>
         </section>

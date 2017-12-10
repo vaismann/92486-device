@@ -288,8 +288,10 @@
       <div class="main__company-details company-details">
         <section class="company-details__about-us about-us">
           <h3 class="company-details__heading main-heading">О нас</h3>
-          <p class="about-us__description">Огромный выбор гаджетов не оставит равнодушным гика,<br> который есть в каждом из нас.</p>
-          <p class="about-us__description">Мы можем доставить ваш товар в самые отдаленные точки<br> России! DEVICE работает со многими транспортными компаниями</p>
+          <p class="about-us__description">Огромный выбор гаджетов не оставит равнодушным гика,
+            <br> который есть в каждом из нас.</p>
+          <p class="about-us__description">Мы можем доставить ваш товар в самые отдаленные точки
+            <br> России! DEVICE работает со многими транспортными компаниями</p>
           <ul class="about-us__delivery-partners-section delivery-partners">
             <li class="delivery-partners__item">
               <a class="delivery-partners__link" href="#">Деловые Линии</a>
@@ -311,6 +313,9 @@
           </div>
           <a class="contacts__contact-link btn" href="#">Напишите нам</a>
         </section>
+        <div class="company-details__map modal-map modal-map_hidden">
+          <img class="modal-map__placeholder" src="img/map-big.jpg" width="960" height="559" alt="Карта">
+        </div>
       </div>
       </div>
   </main>
@@ -400,24 +405,26 @@
     </div>
   </footer>
   <!-- MODAL -->
-  <div class="modal-contact">
-    <button class="modal-contact__close-btn close-btn">
-      <svg class="close-btn__img" role="img" title="Close Button" aria-label="Закрыть окно обратной связи">
-        <use xlink:href="img/svg/icons.svg#modal-close"></use>
-      </svg>
-    </button>
+  <div class="modal-contact modal-contact_hidden">
     <form class="modal-contact__contact-form contact-form" method="post">
-      <label class="contact-form__label" for="name-field">Ваше имя:</label>
-      <input class="contact-form__input" type="text" id="name-field">
-      <label class="contact-form__label" for="email-field">Ваш e-mail:</label>
-      <input class="contact-form__input" type="email" id="email-field">
-      <label class="contact-form__label" for="comment-field">Текст письма:</label>
-      <textarea class="contact-form__comment" id="comment-field">В свободной форме</textarea>
-      <input class="contact-form__submit" type="submit" value="Отправить">
+      <div class="contact-form__fields">
+        <div class="contact-form__field">
+          <label class="contact-form__label" for="name-field">Ваше имя:</label>
+          <input class="contact-form__input" type="text" id="name-field">
+        </div>
+        <div class="contact-form__field">
+          <label class="contact-form__label" for="email-field">Ваш e-mail:</label>
+          <input class="contact-form__input" type="email" id="email-field">
+        </div>
+        <div class="contact-form__field contact-form__field_text">
+          <label class="contact-form__label" for="comment-field">Текст письма:</label>
+          <textarea class="contact-form__comment" id="comment-field">В свободной форме</textarea>
+        </div>
+        <input class="contact-form__submit btn" type="submit" value="Отправить">
+      </div>
     </form>
-  </div>
-  <div class="modal-map">
-    <img class="modal-map__placeholder" src="img/map-big.jpg" width="960" height="559" alt="Карта">
+    <button class="modal-contact__close-btn close-btn">
+    </button>
   </div>
 </body>
 
