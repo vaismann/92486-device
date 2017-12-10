@@ -956,15 +956,15 @@ img {
 
 .filters__header {
   display: flex;
-  align-items: center;
+  margin-bottom: 83px;
+  min-height: 70px;
 }
 
 .filters__title {
   position: relative;
   z-index: 1;
-
-  min-height: 70px;
-
+  margin: 0;
+  padding-top: 25px;
   font: bold 16px "Gilroy", "Arial", "Helvetica", sans-serif;
   color: rgba(0, 0, 0, 1);
   letter-spacing: 3.5px;
@@ -972,6 +972,7 @@ img {
 }
 
 .filters__form {
+
   padding-right: 67px;
 }
 
@@ -982,18 +983,40 @@ img {
 
 .main__sorting {
   display: flex;
+  align-items: baseline;
   min-height: 70px;
 
 }
 
 .sorting__title {
   position: relative;
+  flex-basis: 200px;
   margin: 0;
+  padding-top: 25px;
+  padding-left: 73px;
   font: bold 16px "Gilroy", "Arial", "Helvetica", sans-serif;
-  letter-spacing: 3.3px;
+  letter-spacing: 3.5px;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 1);
   z-index: 1;
+}
+
+.sorting__types {
+  flex-basis: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sorting__link_dir {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5px 10px 5px;
+  border-color: transparent transparent #000000 transparent;
+}
+
+.sorting__link_desc {
+  transform: translate(20px, 20px);
 }
 
 .filters__fieldset {
