@@ -891,16 +891,30 @@ img {
 
 /* CATALOG ***********************************************************************/
 
-
 .catalog__content {
   display: flex;
 }
 
-
-
 .catalog__filters {
+  position: relative;
+  width: 30%;
+
   background-color: rgba(238, 238, 238, 1);
 }
+
+.catalog__filters::after {
+  content: '';
+  
+  position: absolute;
+  top: 0;
+  
+  width: 100%;
+  height: 70px;
+
+  background-color: rgba(219, 219, 219, 0.8);
+  z-index: 0;
+}
+
 .catalog__title {
   margin-bottom: 13px;
 }
@@ -909,6 +923,8 @@ img {
   padding: 0 59px 0;
   margin-bottom: 39px;
 }
+
+
 
 .breadcrumbs {
   display: flex;
@@ -934,22 +950,25 @@ img {
 }
 
 .filters {
+  width: 265px;
+  margin-left: auto;
+}
+
+.filters__header {
   display: flex;
-  flex-direction: column;
-  width: 328px;
+  align-items: center;
 }
 
 .filters__title {
   position: relative;
-  width: 100%;
-  min-height: 45px;
-  outline: 1px solid red;
+  z-index: 1;
+
+  min-height: 70px;
+
   font: bold 16px "Gilroy", "Arial", "Helvetica", sans-serif;
   color: rgba(0, 0, 0, 1);
   letter-spacing: 3.5px;
   text-transform: uppercase;
-  text-align: right;
-  background-color: rgb(219, 219, 219);
 }
 
 .filters__form {
@@ -961,18 +980,27 @@ img {
   background: none;
 }
 
+.main__sorting {
+  display: flex;
+  min-height: 70px;
+
+}
+
 .sorting__title {
+  position: relative;
+  margin: 0;
   font: bold 16px "Gilroy", "Arial", "Helvetica", sans-serif;
   letter-spacing: 3.3px;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 1);
+  z-index: 1;
 }
 
 .filters__fieldset {
   position: relative;
   margin: 0;
   padding: 0 0 37px;
-  width: 201px;
+  width: 200px;
   border: none;
 }
 
@@ -1089,9 +1117,7 @@ img {
   margin: 0;
   padding: 0;
 }
-.sorting {
-  background-color: rgba(238, 238, 238, 1);
-}
+
 .sorting__link {
   font: normal 14px/18px "Open Sans", "Arial", "Helvetica", sans-serif;
   color: rgba(0, 0, 0, 0.3);
@@ -1103,14 +1129,26 @@ img {
 }
 
 .catalog__products {
-  
-  margin-right: -20px;
+  position: relative;
 }
+
+.catalog__products::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  
+  width: 100%;
+  height: 70px;
+
+  background-color: rgba(219, 219, 219, 0.4);
+  z-index: 0;
+}
+
 
 .product-cards__inner {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 73px;
+  padding: 70px 73px 0;
   background-color: rgba(255, 255, 255, 1);
 }
 
@@ -1124,17 +1162,22 @@ img {
   display: flex;
   flex-direction: column;
 }
+.product__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  order: 2;
+}
 .product__photo {
   order: 1;
 }
 .product__name {
-  order: 2;
+  width: 240px;
   font: bold 18px "Gilroy", "Arial", "Helvetica", sans-serif;
   color: rgba(0, 0, 0, 1);
 }
 
 .product__price {
-  order: 3;
   font: normal 16px "Gilroy", "Arial", "Helvetica", sans-serif;
 }
 
