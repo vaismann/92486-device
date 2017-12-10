@@ -1007,7 +1007,25 @@ img {
   justify-content: space-between;
 }
 
-.sorting__link_dir {
+.sorting__directions {
+  display: flex;
+
+  width: 60px;
+}
+.sorting__dir {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+  line-height: 1;
+}
+
+.sorting__dir::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: '';
   width: 0;
   height: 0;
   border-style: solid;
@@ -1015,7 +1033,7 @@ img {
   border-color: transparent transparent #000000 transparent;
 }
 
-.sorting__link_desc {
+.sorting__dir_desc {
   transform: translate(20px, 20px);
 }
 
