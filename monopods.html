@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <title>HTML Academy: Девайс</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/minifiedcss.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <!--   <link rel="stylesheet" href="css/minifiedcss.css"> -->
 </head>
 
 <body class="site">
@@ -34,7 +35,12 @@
               <svg class="action__icon icon-login">
                 <use xlink:href="img/svg/icons.svg#user"></use>
               </svg>
-              <span class="action__text">Войти</span>
+              <span class="action__text">Валентин Петухов</span>
+            </a>
+          </li>
+          <li class="user-actions__item user-actions__item_logout action">
+            <a class="action__link" href="#">
+              <span class="action__text">Выйти</span>
             </a>
           </li>
           <li class="user-actions__item user-actions__item_compare action">
@@ -90,8 +96,8 @@
           </li>
         </ul>
       </nav>
-  </header>
-</div>
+    </header>
+  </div>
   <main class="site__catalog catalog">
     <div class="centered">
       <header class="catalog__header">
@@ -198,14 +204,14 @@
                 <li class="filters__option option">
                   <input class="visually-hidden option__input" type="radio" name="radio" id="yes" checked>
                   <label class="option__radio" for="yes">
-                  <span class="option__inner-radio"></span>
-                  <span class="option__label-text">Есть</span>
-                </label>
+                    <span class="option__inner-radio"></span>
+                    <span class="option__label-text">Есть</span>
+                  </label>
                 </li>
                 <li class="filters__option option">
                   <input class="visually-hidden option__input" type="radio" name="radio" id="no">
                   <label class="option__radio" for="no">
-                  <span class="option__inner-radio"></span>
+                    <span class="option__inner-radio"></span>
                     <span class="option__label-text">Нет</span>
                   </label>
                 </li>
@@ -234,56 +240,64 @@
           </div>
           <div class="product-cards__inner">
             <article class="product-cards__card product">
-              <img class="product__photo" src="img/products/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+              <div class="product__link">
+                <img class="product__photo" src="img/products/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+                <div class="product__buy-box">
+                  <a class="product__buy-btn btn">В корзину</a>
+                  <a class="product__compare-btn" href="#">Добавить к сравнению</a>
+                </div>
+              </div>
               <div class="product__info">
                 <h4 class="product__name">Любительская селфи-палка</h4>
                 <p class="product__price">500 руб.</p>
               </div>
-              <div class="product__buy-box">
-                <a class="product__buy-btn btn">В корзину</a>
-                <a class="product__compare-btn">Добавить к сравнению</a>
-              </div>
             </article>
             <article class="product-cards__card product">
-              <img class="product__photo" src="img/products/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
+              <div class="product__link">
+                <img class="product__photo" src="img/products/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
+                <div class="product__buy-box">
+                  <a class="product__buy-btn btn">В корзину</a>
+                  <a class="product__compare-btn" href="#">Добавить к сравнению</a>
+                </div>
+              </div>
               <div class="product__info">
                 <h4 class="product__name">Профессиональная селфи-палка</h4>
                 <p class="product__price">1 500 руб.</p>
               </div>
-              <div class="product__buy-box">
-                <a class="product__buy-btn btn">В корзину</a>
-                <a class="product__compare-btn">Добавить к сравнению</a>
-              </div>
             </article>
             <article class="product-cards__card product">
-              <img class="product__photo" src="img/products/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+              <div class="product__link">
+                <img class="product__photo" src="img/products/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+                <div class="product__buy-box">
+                  <a class="product__buy-btn btn">В корзину</a>
+                  <a class="product__compare-btn" href="#">Добавить к сравнению</a>
+                </div>
+              </div>
               <div class="product__info">
                 <h4 class="product__name">Непотопляемая селфи-палка</h4>
                 <p class="product__price">2 500 руб.</p>
               </div>
-              <div class="product__buy-box">
-                <a class="product__buy-btn btn">В корзину</a>
-                <a class="product__compare-btn">Добавить к сравнению</a>
-              </div>
             </article>
             <article class="product-cards__card product">
-              <img class="product__photo" src="img/products/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+              <div class="product__link">
+                <img class="product__photo" src="img/products/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+                <div class="product__buy-box">
+                  <a class="product__buy-btn btn">В корзину</a>
+                  <a class="product__compare-btn" href="#">Добавить к сравнению</a>
+                </div>
+              </div>
               <div class="product__info">
                 <h4 class="product__name">Селфи-палка «Следуй за мной»</h4>
                 <p class="product__price">4 900 руб.</p>
-              </div>
-              <div class="product__buy-box">
-                <a class="product__buy-btn btn">В корзину</a>
-                <a class="product__compare-btn">Добавить к сравнению</a>
               </div>
             </article>
           </div>
           <div class="main__catalog-pagination pagination" aria-label="Переключение страниц с карточками товаров">
             <a class="pagination__link pagination__link_direction" href="#" aria-label="Переход на предыдущую страницу">Назад</a>
             <div class="pagination__pages">
-              <a class="pagination__link pagination__link_current" href="#" aria-label="Первая страница">1</a>
-              <a class="pagination__link" href="#" aria-label="Вторая страница">2</a>
-              <a class="pagination__link" href="#" aria-label="Третья страница">3</a>
+              <a class="pagination__link pagination__link_page pagination__link_current" href="#" aria-label="Первая страница">1</a>
+              <a class="pagination__link pagination__link_page" href="#" aria-label="Вторая страница">2</a>
+              <a class="pagination__link pagination__link_page" href="#" aria-label="Третья страница">3</a>
             </div>
             <a class="pagination__link pagination__link_direction" href="#" aria-label="Переход на следующую страницу">Вперед</a>
           </div>
