@@ -5,8 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <!-- <link rel="stylesheet" href="css/minifiedcss.css"> -->
+  <link rel="stylesheet" href="css/minifiedcss.css">
 </head>
 
 <body class="site">
@@ -99,7 +98,7 @@
       <section class="main__slider slider">
         <h2 class="visually-hidden">Популярные товары</h2>
         <div class="slider__switcher">
-          <button class="slider__switch">
+          <button class="slider__switch slider__switch_curent">
             <span class="visually-hidden">Первый слайд</span>
           </button>
           <button class="slider__switch">
@@ -313,7 +312,7 @@
           <div class="contacts__map map">
             <a class="map__link" href="https://www.google.ru/maps" target="_blank"><img class="map__image" src="img/map.jpg" alt="Наше местоположение на карте" width="560" height="222"></a>
           </div>
-          <a class="contacts__contact-link btn" href="#">Напишите нам</a>
+          <a class="contacts__contact-link btn" href="write-us.html">Напишите нам</a>
         </section>
         <div class="company-details__map modal-map modal-map_hidden">
           <a class="modal-map__link" href="https://www.google.ru/maps" target="_blank"><img class="modal-map__placeholder" src="img/map-big.jpg" width="960" height="559" alt="Карта"></a>
@@ -407,7 +406,7 @@
     </div>
   </footer>
   <!-- MODAL -->
-  <div class="modal-contact modal-contact_hidden">
+  <div class="modal-contact">
     <form class="modal-contact__contact-form contact-form" method="post">
       <div class="contact-form__fields">
         <div class="contact-form__field contact-form__field_name">
@@ -427,10 +426,15 @@
       </div>
     </form>
     <button class="modal-contact__close-btn close-btn">
+      <svg class="close-btn__icon" role="img" aria-hidden="true">
+          <use xlink:href="img/svg/icons.svg#modal-close"></use>
+      </svg>
     </button>
   </div>
-  <script src="/path/to/svg4everybody.js"></script>
-  <script> svg4everybody(); // run it now or whenever you are ready </script>
+  <script src="js/minifiedscript.js"></script>
+  <script src="js/svg4everybody.js"></script>
+  <script> debugger; svg4everybody(); // run it now or whenever you are ready </script>
+
 </body>
 
 </html>

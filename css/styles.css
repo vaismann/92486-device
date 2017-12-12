@@ -543,6 +543,10 @@ img {
   pointer-events: none;
 }
 
+.slider__switch_curent::after {
+
+}
+
 .slide {
   display: flex;
   justify-content: space-between;
@@ -1667,24 +1671,22 @@ img {
 }
 
 .modal-contact {
-  display: block;
+  display: none;
   width: 960px;
   min-height: 553px;
   max-height: 753px;
-  -webkit-box-shadow: 0px 12px 50px -12px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 12px 50px -12px rgba(0,0,0,0.75);
   box-shadow: 0px 12px 50px -12px rgba(0,0,0,0.75);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 1100px auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
   background-color: white;
   z-index: 1;
 }
 
-.modal-contact_hidden {
-  display: none;
+.modal-contact_show {
+  display: block;
 }
 
 .contact-form {
@@ -1768,7 +1770,8 @@ img {
 .contact-form__btn {
   width: 200px;
   border: none;
-  background-color: none;
+  background: none;
+  -webkit-backface-visibility: hidden;
 }
 .close-btn {
   position: absolute;
@@ -1777,12 +1780,28 @@ img {
   height: 55px;
   width: 55px;
   border: none;
-  background-color: transparent;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55"><path fill="#F0C52E" d="M27.5 0C12.312 0 0 12.312 0 27.5S12.312 55 27.5 55 55 42.688 55 27.5 42.688 0 27.5 0zm11.476 37.072l-1.486 1.426-9.99-9.574-9.987 9.574-1.488-1.426 9.988-9.573-9.987-9.573 1.487-1.425 9.987 9.573 9.988-9.573 1.487 1.425-9.989 9.574 9.99 9.572z"/></svg>');
-  background-repeat: no-repeat;
   outline: none;
   cursor: pointer;
+  background: none;
+  opacity: .5;
 }
+
+.close-btn:hover {
+  opacity: 1;
+}
+
+.close-btn:active {
+  opacity: .3;
+}
+
+.close-btn__icon {
+  position: absolute;
+  top: 23px;
+  right: 22px;
+  width: 55px;
+  height: 55px;
+}
+
 .contact-form__submit {
   border: none;
   background: none;

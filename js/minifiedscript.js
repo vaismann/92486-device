@@ -1,0 +1,1 @@
+var link=document.querySelector(".contacts__contact-link"),popup=document.querySelector(".modal-contact"),close=popup.querySelector(".modal-contact__close-btn");link.addEventListener("click",function(t){t.preventDefault(),popup.classList.add("modal-contact_show")}),close.addEventListener("click",function(t){t.preventDefault(),popup.classList.remove("modal-contact_show")});
