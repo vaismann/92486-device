@@ -151,10 +151,11 @@ img {
 .header__logo {
   display: inline-block;
   margin-top: -28px;
+  margin-bottom: 14px;
 }
 
 .header__actions {
-  margin-bottom: 18px;
+  margin-bottom: 26px;
 }
 
 .header__nav {
@@ -202,10 +203,15 @@ img {
   display: flex;
   flex-basis: 505px;
   flex-wrap: wrap;
+  margin: 0;
   list-style: none;
 }
 
 .user-actions__item_login {
+  flex-basis: 277px;
+}
+
+.user-actions__item_loged {
   flex-basis: 159px;
 }
 
@@ -229,7 +235,7 @@ img {
 
 .site-search__label {
   position: absolute;
-  top: 8px;
+  top: 11px;
   left: 8px;
   width: 16px;
   height: 16px;
@@ -301,6 +307,10 @@ img {
   position: relative;
   color: rgba(0, 0, 0, 1);
   text-decoration: none;
+}
+
+.action__link_logout {
+  color: rgba(0, 0, 0, .3);
 }
 
 .action__link:hover {
@@ -402,7 +412,7 @@ img {
 
   display: none;
   width: 1100px;
-  min-height: 142px;
+  min-height: 143px;
   padding: 23px 0 0 60px;
 
   font: normal 15px/36px "Open Sans", "Arial", "Helvetica", sans-serif;
@@ -495,7 +505,7 @@ img {
 .slider__switcher {
   position: absolute;
   right: 74px;
-  bottom: 183px;
+  bottom: 182px;
   display: flex;
   justify-content: space-between;
   width: 95px;
@@ -574,7 +584,7 @@ img {
 
 .slide__slogan {
   z-index: 1;
-  padding-top: 32px;
+  padding-top: 33px;
   margin-bottom: 2px;
 }
 
@@ -776,6 +786,7 @@ img {
 
 .brand {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   list-style: none;
 }
@@ -788,6 +799,7 @@ img {
 .brand__link {
   width: 260px;
   height: 100px;
+  background-color: rgba(0, 0, 0, .2);
 }
 
 .brand__link_dji {
@@ -1341,11 +1353,40 @@ img {
 .product__photo {
    margin-bottom: 10px;
 }
+
+.product__link_new {
+  position: relative;
+}
+
+.product__link_new::before {
+  content: 'New';
+  position: absolute;
+  top: 29px;
+  right: 26px;
+  width: 38px;
+  height: 38px;
+  padding: 9px;
+  font: bold 14px/38px "Gilroy", "Arial", "Helvetica", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, .1);
+  border: 2px solid rgba(0, 0, 0, .1);
+  border-radius: 50%;
+  z-index: 1;
+
+}
 .product__name {
   width: 240px;
   font: bold 18px "Gilroy", "Arial", "Helvetica", sans-serif;
   color: rgba(0, 0, 0, 1);
   margin: 0;
+}
+
+.product__name-link {
+  font: bold 18px "Gilroy", "Arial", "Helvetica", sans-serif;
+  color: rgba(0, 0, 0, 1);
+  margin: 0;
+  text-decoration: none;
 }
 
 .product__price {
@@ -1643,7 +1684,7 @@ img {
 }
 
 .modal-contact_hidden {
-  display: block;
+  display: none;
 }
 
 .contact-form {
