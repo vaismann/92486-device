@@ -1,3 +1,5 @@
+svg4everybody();
+
 var link = document.querySelector(".contacts__contact-link");
 var popup = document.querySelector(".modal-contact");
 var close = popup.querySelector(".modal-contact__close-btn");
