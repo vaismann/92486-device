@@ -942,7 +942,9 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0px 12px 50px -12px rgba(0,0,0,0.75);
+  box-shadow: -40px 0 40px -40px rgba(2,4,6,.75), 
+              40px 0 40px -40px rgba(2,4,6,.75), 
+              0 8px 20px 2px rgba(2,4,6,.2);
   z-index: 1;
 }
 
@@ -956,7 +958,6 @@ img {
   position: absolute;
   top: 0;
   margin: 0;
-  box-shadow: 0px 12px 50px -12px rgba(0,0,0,0.75);
 }
 
 .map {
@@ -1739,7 +1740,9 @@ img {
   width: 960px;
   min-height: 553px;
   max-height: 753px;
-  box-shadow: 0px 12px 50px -12px rgba(0,0,0,0.75);
+  box-shadow: -40px 0 40px -40px rgba(2,4,6,.75), 
+              40px 0 40px -40px rgba(2,4,6,.75), 
+              0 8px 20px 2px rgba(2,4,6,.2);
   position: fixed;
   top: 50%;
   left: 50%;
