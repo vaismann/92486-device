@@ -133,6 +133,7 @@
             <!--Price Filter  -->
             <fieldset class="filters__fieldset filters__fieldset_price">
               <legend class="filters__legend filters__legend_price">Стоимость</legend>
+              <span class="filters__fieldset_border filters__fieldset_border_price"></span>
               <div class="filters__price-range price-range">
                 <div class="price-range__scale">
                   <div class="price-range__bar"></div>
@@ -146,14 +147,18 @@
               </div>
             </fieldset>
             <!-- Colour Filter -->
-            <fieldset class="filters__fieldset filters__fieldset_color">
+            <fieldset class="filters__fieldset filters__fieldset_colour">
               <legend class="filters__legend filters__legend_color">Цвет</legend>
+              <span class="filters__fieldset_border filters__fieldset_border_colour"></span>
               <ul class="filters__options">
                 <li class="filters__option option">
                   <input class="option__input" type="checkbox" id="filter-black-colour" checked>
                   <label class="option__label option__label_checkbox" for="filter-black-colour">
-                    <svg class="option__icon">
-                      <use xlink:href="img/svg/icons.svg#tick"></use>
+                    <svg class="option__icon option__icon_off">
+                      <use xlink:href="img/svg/icons.svg#checkbox-off"></use>
+                    </svg>
+                    <svg class="option__icon option__icon_on">
+                      <use xlink:href="img/svg/icons.svg#checkbox-on"></use>
                     </svg>
                     <span class="option__label-text">Черный</span>
                   </label>
@@ -161,8 +166,11 @@
                 <li class="filters__option option">
                   <input class="option__input" type="checkbox" id="filter-white-colour">
                   <label class="option__label" for="filter-white-colour">
-                    <svg class="option__icon">
-                      <use xlink:href="img/svg/icons.svg#tick"></use>
+                    <svg class="option__icon option__icon_off">
+                      <use xlink:href="img/svg/icons.svg#checkbox-off"></use>
+                    </svg>
+                    <svg class="option__icon option__icon_on">
+                      <use xlink:href="img/svg/icons.svg#checkbox-on"></use>
                     </svg>
                     <span class="option__label-text">Белый</span>
                   </label>
@@ -170,8 +178,11 @@
                 <li class="filters__option option">
                   <input class="option__input" type="checkbox" id="filter-blue-colour" checked>
                   <label class="option__label" for="filter-blue-colour">
-                    <svg class="option__icon">
-                      <use xlink:href="img/svg/icons.svg#tick"></use>
+                    <svg class="option__icon option__icon_off">
+                      <use xlink:href="img/svg/icons.svg#checkbox-off"></use>
+                    </svg>
+                    <svg class="option__icon option__icon_on">
+                      <use xlink:href="img/svg/icons.svg#checkbox-on"></use>
                     </svg>
                     <span class="option__label-text">Синий</span>
                   </label>
@@ -179,8 +190,11 @@
                 <li class="filters__option option">
                   <input class="option__input" type="checkbox" id="filter-red-colour" checked>
                   <label class="option__label" for="filter-red-colour">
-                    <svg class="option__icon">
-                      <use xlink:href="img/svg/icons.svg#tick"></use>
+                    <svg class="option__icon option__icon_off">
+                      <use xlink:href="img/svg/icons.svg#checkbox-off"></use>
+                    </svg>
+                    <svg class="option__icon option__icon_on">
+                      <use xlink:href="img/svg/icons.svg#checkbox-on"></use>
                     </svg>
                     <span class="option__label-text">Красный</span>
                   </label>
@@ -188,8 +202,11 @@
                 <li class="filters__option option">
                   <input class="option__input" type="checkbox" id="filter-rose-colour">
                   <label class="option__label" for="filter-rose-colour">
-                    <svg class="option__icon">
-                      <use xlink:href="img/svg/icons.svg#tick"></use>
+                    <svg class="option__icon option__icon_off">
+                      <use xlink:href="img/svg/icons.svg#checkbox-off"></use>
+                    </svg>
+                    <svg class="option__icon option__icon_on">
+                      <use xlink:href="img/svg/icons.svg#checkbox-on"></use>
                     </svg>
                     <span class="option__label-text">Розовый</span>
                   </label>
@@ -199,18 +216,29 @@
             <!-- Bluetooth Filter -->
             <fieldset class="filters__fieldset filters__fieldset_bluetooth">
               <legend class="filters__legend filters__legend_bluetooth">Bluetooth</legend>
+              <span class="filters__fieldset_border filters__fieldset_border_bluetooth"></span>
               <ul class="filters__options option">
                 <li class="filters__option option">
                   <input class="visually-hidden option__input" type="radio" name="radio" id="yes" checked>
                   <label class="option__radio" for="yes">
-                    <span class="option__inner-radio"></span>
+                    <svg class="option__radio-icon option__radio-icon_off">
+                      <use xlink:href="img/svg/icons.svg#radio-off"></use>
+                    </svg>
+                    <svg class="option__radio-icon option__radio-icon_on">
+                      <use xlink:href="img/svg/icons.svg#radio-on"></use>
+                    </svg>
                     <span class="option__label-text">Есть</span>
                   </label>
                 </li>
                 <li class="filters__option option">
                   <input class="visually-hidden option__input" type="radio" name="radio" id="no">
                   <label class="option__radio" for="no">
-                    <span class="option__inner-radio"></span>
+                    <svg class="option__radio-icon option__radio-icon_off">
+                      <use xlink:href="img/svg/icons.svg#radio-off"></use>
+                    </svg>
+                    <svg class="option__radio-icon option__radio-icon_on">
+                      <use xlink:href="img/svg/icons.svg#radio-on"></use>
+                    </svg>
                     <span class="option__label-text">Нет</span>
                   </label>
                 </li>

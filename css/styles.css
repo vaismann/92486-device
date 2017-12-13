@@ -817,7 +817,6 @@ img {
 .brand__link {
   width: 260px;
   height: 100px;
-  background-color: rgba(0, 0, 0, .2);
 }
 
 .brand__link_dji {
@@ -936,19 +935,35 @@ img {
 }
 
 .company-details__map {
-  display: block;
-  position: absolute;
+  display: none;
+  position: fixed;
   width: 960px;
+  height: 559px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  box-shadow: 0px 12px 50px -12px rgba(0,0,0,0.75);
+  z-index: 1;
 }
+
+.modal-map__live {
+  position: relative;
+  z-index: 2;
+  border: none;
+}
+
+.modal-map__link {
+  position: absolute;
+  top: 0;
+  margin: 0;
+}
+
 .map {
   width: 560px;
   min-height: 222px;
 }
-.modal-map_hidden {
-  display: none;
+.modal-map_show {
+  display: block;
 }
 
 .about-us__description {
@@ -966,6 +981,8 @@ img {
 }
 
 
+
+
 /* CATALOG ***********************************************************************/
 
 .catalog__content {
@@ -974,7 +991,7 @@ img {
 
 .catalog__filters {
   position: relative;
-  width: 40.5%;
+  width: 37.6%;
 
   background-color: rgba(238, 238, 238, 1);
 }
@@ -1033,12 +1050,11 @@ img {
 }
 
 .filters {
-  width: 265px;
+  width: 268px;
   margin-left: auto;
 }
 
 .filters__header {
-  display: flex;
   margin-bottom: 83px;
   min-height: 70px;
 }
@@ -1066,28 +1082,42 @@ img {
 .filters__fieldset {
   position: relative;
   margin: 0;
-  padding: 0 0 37px;
+  padding: 0;
   width: 200px;
   border: none;
+
 }
 
-.filters__fieldset::before {
-  content: '';
+.filters__fieldset_border {
   position: absolute;
-  top: -14px;
   background-color: black;
   width: 100%;
   height: 2px;
 }
 
+.filters__fieldset_border_price {
+  bottom: 106px;
+}
+
+.filters__fieldset_border_colour {
+  bottom: 260px;
+}
+
+.filters__fieldset_border_bluetooth {
+  bottom: 140px;
+}
+
 .filters__fieldset_price {
-  margin-bottom: 10px;
+  margin-bottom: 46px;
 }
 
 .filters__legend {
-  margin-bottom: 36px;
   font: bold 18px "Gilroy", "Arial", "Helvetica", sans-serif;
   color: rgba(0, 0, 0, 1);
+}
+
+.filters__legend_price {
+  margin-bottom: 37px;
 }
 
 .price-range{
@@ -1141,8 +1171,8 @@ img {
   margin-right: 55px;
 }
 
-.filters__fieldset_color {
-  margin-bottom: 0;
+.filters__fieldset_colour {
+  margin-bottom: 37px;
 }
 
 .filters__legend_color {
@@ -1162,18 +1192,6 @@ img {
   cursor: pointer;
 }
 
-.option__label::before {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  left: -41px;
-  width: 19px;
-  height: 19px;
-  border: 2px solid black;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
 .option__input {
   position: relative;
   z-index: 0;
@@ -1181,16 +1199,30 @@ img {
 }
 
 .option__icon {
-  display: none;
+  display: block;
   position: absolute;
-  top: 2px;
-  left: -38px;
-  width: 24px;
-  height: 14px;
+  top: -2px;
+  left: -41px;
 }
 
-.option__input:checked + .option__label .option__icon {
+.option__icon_off {
+  width: 23px;
+  height: 23px;
+}
+
+.option__icon_on {
+  width: 27px;
+  height: 23px;
+}
+
+.option__input:checked + .option__label .option__icon_on,
+.option__input:not(:checked) + .option__label .option__icon_off {
   display: block;
+}
+
+.option__input:checked + .option__label .option__icon_off,
+.option__input:not(:checked) + .option__label .option__icon_on {
+  display: none;
 }
 
 .option__label:hover::before {
@@ -1225,35 +1257,23 @@ img {
   cursor: pointer;
 }
 
-.option__radio::before {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: -43px;
-  width: 15px;
-  height: 15px;
-  border: 4px solid black;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.option__radio {
-  position: relative;
-}
-
-.option__inner-radio {
-  position: absolute;
-  display: none;
-  top: 6px;
-  left: -35px;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background-color: black;
-}
-
-.option__input:checked + .option__radio .option__inner-radio {
+.option__radio-icon {
   display: block;
+  position: absolute;
+  top: -4px;
+  left: -41px;
+  width: 25px;
+  height: 25px;
+}
+
+.option__input:checked + .option__radio .option__radio-icon_on,
+.option__input:not(:checked) + .option__radio .option__radio-icon_off {
+  display: block;
+}
+
+.option__input:checked + .option__readio .option__radio-icon_off,
+.option__input:not(:checked) + .option__radio .option__radio-icon_on {
+  display: none;
 }
 
 .option__radio:hover::before {
@@ -1685,6 +1705,46 @@ img {
   height: 34px;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(-1000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal-contact {
   display: none;
   width: 960px;
@@ -1702,6 +1762,11 @@ img {
 
 .modal-contact_show {
   display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-contact_error {
+  animation: shake 0.6s;
 }
 
 .contact-form {
@@ -1792,8 +1857,9 @@ img {
   position: absolute;
   top: 23px;
   right: 22px;
-  height: 55px;
-  width: 55px;
+  z-index: 2;
+  height: 56px;
+  width: 56px;
   border: none;
   outline: none;
   cursor: pointer;
@@ -1811,8 +1877,8 @@ img {
 
 .close-btn__icon {
   position: absolute;
-  top: 23px;
-  right: 22px;
+  top: 0;
+  right: 0;
   width: 55px;
   height: 55px;
 }

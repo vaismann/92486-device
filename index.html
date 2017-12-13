@@ -312,10 +312,16 @@
           <div class="contacts__map map">
             <a class="map__link" href="https://www.google.ru/maps" target="_blank"><img class="map__image" src="img/map.jpg" alt="Наше местоположение на карте" width="560" height="222"></a>
           </div>
-          <a class="contacts__contact-link btn" href="write-us.html">Напишите нам</a>
+          <a class="contacts__contact-link btn" href="contact-us.html">Напишите нам</a>
         </section>
-        <div class="company-details__map modal-map modal-map_hidden">
+        <div class="company-details__map modal-map">
+          <iframe class="modal-map__live" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1124311038934!2d37.52814366593366!3d55.68703302818081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsINCg0L7RgdGB0LjRjywgMTE5MzEx!5e0!3m2!1sru!2see!4v1513189975469" width="960" height="559" allowfullscreen></iframe>
           <a class="modal-map__link" href="https://www.google.ru/maps" target="_blank"><img class="modal-map__placeholder" src="img/map-big.jpg" width="960" height="559" alt="Карта"></a>
+          <button class="modal-contact__close-btn close-btn">
+            <svg class="close-btn__icon" role="img" aria-hidden="true">
+              <use xlink:href="img/svg/icons.svg#modal-close"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
@@ -411,11 +417,11 @@
       <div class="contact-form__fields">
         <div class="contact-form__field contact-form__field_name">
           <label class="contact-form__label" for="name-field">Ваше имя:</label>
-          <input class="contact-form__input" type="text" id="name-field" placeholder="Представьтесь, пожалуйста">
+          <input class="contact-form__input" type="text" name="contact-name" id="name-field" placeholder="Представьтесь, пожалуйста">
         </div>
         <div class="contact-form__field contact-form__field_email">
           <label class="contact-form__label" for="email-field">Ваш e-mail:</label>
-          <input class="contact-form__input" type="email" id="email-field" placeholder="Для отправки ответа">
+          <input class="contact-form__input" type="email" name="contact-email" id="email-field" placeholder="Для отправки ответа">
         </div>
         <div class="contact-form__field contact-form__field_text">
           <label class="contact-form__label" for="comment-field">Текст письма:</label>
@@ -427,13 +433,12 @@
     </form>
     <button class="modal-contact__close-btn close-btn">
       <svg class="close-btn__icon" role="img" aria-hidden="true">
-          <use xlink:href="img/svg/icons.svg#modal-close"></use>
+        <use xlink:href="img/svg/icons.svg#modal-close"></use>
       </svg>
     </button>
   </div>
   <script src="js/svg4everybody.js"></script>
   <script src="js/minifiedscript.js"></script>
-
 </body>
 
 </html>
