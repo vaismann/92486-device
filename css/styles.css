@@ -1322,7 +1322,7 @@ img {
 }
 
 .sorting__types {
-  flex-basis: 500px;
+  flex-basis: 305px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1362,10 +1362,18 @@ img {
 }
 
 .sorting__link {
-  margin-right: 32px;
+  margin-right: 20px;
   font: normal 14px/18px "Open Sans", "Arial", "Helvetica", sans-serif;
   color: rgba(0, 0, 0, 0.3);
   text-decoration: none;
+}
+
+.sorting__link:hover {
+  color: rgba(0, 0, 0, .6);
+}
+
+.sorting__link:active {
+  color: rgba(0, 0, 0, 1);
 }
 
 .sorting__link_active {
