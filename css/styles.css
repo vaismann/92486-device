@@ -627,13 +627,13 @@ img {
 }
 
 .product-details__value {
-  margin-right: 75px;
+  padding-right: 75px;
   font: normal 36px "Gilroy", "Arial", "Helvetica", sans-serif;
   color: rgba(0, 0, 0, 1);
 }
 
 .product-details__parameter {
-  margin-right: 77px;
+  padding-right: 77px;
   font-size: 13px;
   line-height: 20px;
 }
