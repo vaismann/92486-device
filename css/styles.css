@@ -610,6 +610,7 @@ img {
 }
 
 .slide__description {
+  width: 480px;
   flex-basis: 90px;
 }
 
@@ -788,7 +789,7 @@ img {
 }
 
 .accordion__description {
-  width: 600px;
+  width: 440px;
   letter-spacing: 0.2px;
   padding-bottom: 20px;
 }
@@ -905,6 +906,7 @@ img {
 }
 
 .contacts__description {
+  width: 510px;
   margin-bottom: 40px;
 }
 
