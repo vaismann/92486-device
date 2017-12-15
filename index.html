@@ -18,14 +18,14 @@
       </a>
       <div class="header__actions user-actions">
         <div class="user-actions__item user-actions__item_search">
-          <form class="site-search" method="get">
+          <form class="site-search" action="https://echo.htmlacademy.ru" method="get">
             <label class="site-search__label" for="search-field">
               <svg class="site-search__icon">
                 <use xlink:href="img/svg/icons.svg#search"></use>
               </svg>
             </label>
             <input class="site-search__field" type="search" id="search-field" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
-            <button class="site-search__button">Найти</button>
+            <button class="site-search__button" type="get">Найти</button>
           </form>
         </div>
         <ul class="user-actions__list">
@@ -236,7 +236,7 @@
           <button class="btn accordion__btn accordion__btn_active">
             Доставка
           </button>
-          <button class="btn accordion__btn ">
+          <button class="btn accordion__btn">
             Гарантия
           </button>
           <button class="btn accordion__btn">
@@ -317,7 +317,7 @@
         <div class="company-details__map modal-map">
           <iframe class="modal-map__live" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1124311038934!2d37.52814366593366!3d55.68703302818081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsINCg0L7RgdGB0LjRjywgMTE5MzEx!5e0!3m2!1sru!2see!4v1513189975469" width="960" height="559" allowfullscreen></iframe>
           <a class="modal-map__link" href="https://www.google.ru/maps" target="_blank"><img class="modal-map__placeholder" src="img/map-big.jpg" width="960" height="559" alt="Карта"></a>
-          <button class="modal-contact__close-btn close-btn">
+          <button class="modal-contact__close-btn close-btn" type="button" name="close-btn">
             <svg class="close-btn__icon" role="img" aria-hidden="true">
               <use xlink:href="img/svg/icons.svg#modal-close"></use>
             </svg>
@@ -413,7 +413,7 @@
   </footer>
   <!-- MODAL -->
   <div class="modal-contact">
-    <form class="modal-contact__contact-form contact-form" method="post">
+    <form class="modal-contact__contact-form contact-form" action="https://echo.htmlacademy.ru" method="post">
       <div class="contact-form__fields">
         <div class="contact-form__field contact-form__field_name">
           <label class="contact-form__label" for="name-field">Ваше имя:</label>
@@ -430,7 +430,7 @@
         <button class="contact-form__btn btn" type="submit">Отправить</button>
       </div>
     </form>
-    <button class="modal-contact__close-btn close-btn">
+    <button class="modal-contact__close-btn close-btn" type="button" name="close-btn">
       <svg class="close-btn__icon" role="img" aria-hidden="true">
         <use xlink:href="img/svg/icons.svg#modal-close"></use>
       </svg>

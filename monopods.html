@@ -18,7 +18,7 @@
       </a>
       <div class="header__actions user-actions">
         <div class="user-actions__item user-actions__item_search">
-          <form class="site-search" method="get">
+          <form class="site-search" action="https://echo.htmlacademy.ru" method="get">
             <label class="site-search__label" for="search-field">
               <svg class="site-search__icon">
                 <use xlink:href="img/svg/icons.svg#search"></use>
@@ -123,216 +123,220 @@
         </div>
       </header>
     </div>
-    <div class="catalog__container">
-    <div class="catalog__content centered">
-      <div class="catalog__filters">
-        <section class="filters">
-          <header class="filters__header">
-            <h4 class="filters__title">Фильтр:</h4>
-          </header>
-          <form class="filters__form">
-            <!--Price Filter  -->
-            <fieldset class="filters__fieldset filters__fieldset_price">
-              <legend class="filters__legend filters__legend_price">Стоимость</legend>
-              <span class="filters__fieldset_border filters__fieldset_border_price"></span>
-              <div class="filters__price-range price-range">
-                <div class="price-range__scale">
-                  <div class="price-range__bar"></div>
-                </div>
-                <div class="price-range__toggle toggle toggle_min"></div>
-                <div class="price-range__toggle toggle toggle_max"></div>
-              </div>
-              <div class="price-range__select">
-                <span class="price-range__select-min">от 0</span>
-                <span class="price-range__select-min">до 5000</span>
-              </div>
-            </fieldset>
-            <!-- Colour Filter -->
-            <fieldset class="filters__fieldset filters__fieldset_colour">
-              <legend class="filters__legend filters__legend_color">Цвет</legend>
-              <span class="filters__fieldset_border filters__fieldset_border_colour"></span>
-              <ul class="filters__options">
-                <li class="filters__option option">
-                  <input class="option__input" type="checkbox" id="filter-black-colour" checked>
-                  <label class="option__label option__label_checkbox" for="filter-black-colour">
-                    <svg class="option__icon option__icon_off">
-                      <use xlink:href="img/svg/icons.svg#checkbox-off"></use>
-                    </svg>
-                    <svg class="option__icon option__icon_on">
-                      <use xlink:href="img/svg/icons.svg#checkbox-on"></use>
-                    </svg>
-                    <span class="option__label-text">Черный</span>
-                  </label>
-                </li>
-                <li class="filters__option option">
-                  <input class="option__input" type="checkbox" id="filter-white-colour">
-                  <label class="option__label" for="filter-white-colour">
-                    <svg class="option__icon option__icon_off">
-                      <use xlink:href="img/svg/icons.svg#checkbox-off"></use>
-                    </svg>
-                    <svg class="option__icon option__icon_on">
-                      <use xlink:href="img/svg/icons.svg#checkbox-on"></use>
-                    </svg>
-                    <span class="option__label-text">Белый</span>
-                  </label>
-                </li>
-                <li class="filters__option option">
-                  <input class="option__input" type="checkbox" id="filter-blue-colour" checked>
-                  <label class="option__label" for="filter-blue-colour">
-                    <svg class="option__icon option__icon_off">
-                      <use xlink:href="img/svg/icons.svg#checkbox-off"></use>
-                    </svg>
-                    <svg class="option__icon option__icon_on">
-                      <use xlink:href="img/svg/icons.svg#checkbox-on"></use>
-                    </svg>
-                    <span class="option__label-text">Синий</span>
-                  </label>
-                </li>
-                <li class="filters__option option">
-                  <input class="option__input" type="checkbox" id="filter-red-colour" checked>
-                  <label class="option__label" for="filter-red-colour">
-                    <svg class="option__icon option__icon_off">
-                      <use xlink:href="img/svg/icons.svg#checkbox-off"></use>
-                    </svg>
-                    <svg class="option__icon option__icon_on">
-                      <use xlink:href="img/svg/icons.svg#checkbox-on"></use>
-                    </svg>
-                    <span class="option__label-text">Красный</span>
-                  </label>
-                </li>
-                <li class="filters__option option">
-                  <input class="option__input" type="checkbox" id="filter-rose-colour">
-                  <label class="option__label" for="filter-rose-colour">
-                    <svg class="option__icon option__icon_off">
-                      <use xlink:href="img/svg/icons.svg#checkbox-off"></use>
-                    </svg>
-                    <svg class="option__icon option__icon_on">
-                      <use xlink:href="img/svg/icons.svg#checkbox-on"></use>
-                    </svg>
-                    <span class="option__label-text">Розовый</span>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-            <!-- Bluetooth Filter -->
-            <fieldset class="filters__fieldset filters__fieldset_bluetooth">
-              <legend class="filters__legend filters__legend_bluetooth">Bluetooth</legend>
-              <span class="filters__fieldset_border filters__fieldset_border_bluetooth"></span>
-              <ul class="filters__options option">
-                <li class="filters__option option">
-                  <input class="visually-hidden option__input" type="radio" name="radio" id="yes" checked>
-                  <label class="option__radio" for="yes">
-                    <svg class="option__radio-icon option__radio-icon_off">
-                      <use xlink:href="img/svg/icons.svg#radio-off"></use>
-                    </svg>
-                    <svg class="option__radio-icon option__radio-icon_on">
-                      <use xlink:href="img/svg/icons.svg#radio-on"></use>
-                    </svg>
-                    <span class="option__label-text">Есть</span>
-                  </label>
-                </li>
-                <li class="filters__option option">
-                  <input class="visually-hidden option__input" type="radio" name="radio" id="no">
-                  <label class="option__radio" for="no">
-                    <svg class="option__radio-icon option__radio-icon_off">
-                      <use xlink:href="img/svg/icons.svg#radio-off"></use>
-                    </svg>
-                    <svg class="option__radio-icon option__radio-icon_on">
-                      <use xlink:href="img/svg/icons.svg#radio-on"></use>
-                    </svg>
-                    <span class="option__label-text">Нет</span>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-            <button class="filters__submit-btn btn" aria-label="Показать" type="submit">Показать</button>
-          </form>
+    <div class="catalog__filters-container filters-container">
+      <div class="filters-container__inner centered">
+        <section class="filters__header">
+          <h4 class="filters__title">Фильтр:</h4>
         </section>
-      </div>
-      <div class="catalog__products">
-        <section class="product-cards">
-          <h3 class="visually-hidden">Список товаров</h3>
-          <div class="main__sorting sorting" aria-label="Сортировка">
-            <div class="sorting__inner">
-              <h4 class="sorting__title">Сортировка:</h4>
-              <div class="sorting__types">
-                <a class="sorting__link sorting__link_active" href="#">По цене</a>
-                <a class="sorting__link" href="#">По типу</a>
-                <a class="sorting__link" href="#">По популярности</a>
-              </div>
-              <div class="sorting__directions">
-                <a class="sorting__dir" href="#" aria-label="по возрастанию"></a>
-                <a class="sorting__dir sorting__dir_desc" href="#" aria-label="по убыванию"></a>
-              </div>
+        <div class="main__sorting sorting" aria-label="Сортировка">
+          <div class="sorting__inner">
+            <h4 class="sorting__title">Сортировка:</h4>
+            <div class="sorting__types">
+              <a class="sorting__link sorting__link_active" href="#">По цене</a>
+              <a class="sorting__link" href="#">По типу</a>
+              <a class="sorting__link" href="#">По популярности</a>
+            </div>
+            <div class="sorting__directions">
+              <a class="sorting__dir" href="#" aria-label="по возрастанию"></a>
+              <a class="sorting__dir sorting__dir_desc" href="#" aria-label="по убыванию"></a>
             </div>
           </div>
-          <div class="product-cards__inner">
-            <article class="product-cards__card product">
-              <div class="product__link">
-                <img class="product__photo" src="img/products/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
-                <div class="product__buy-box">
-                  <a class="product__buy-btn btn">В корзину</a>
-                  <a class="product__compare-btn" href="#">Добавить к сравнению</a>
-                </div>
-              </div>
-              <div class="product__info">
-                <h4 class="product__name"><a class="product__name-link" href="#">Любительская селфи-палка</a></h4>
-                <p class="product__price">500 руб.</p>
-              </div>
-            </article>
-            <article class="product-cards__card product">
-              <div class="product__link">
-                <img class="product__photo" src="img/products/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
-                <div class="product__buy-box">
-                  <a class="product__buy-btn btn">В корзину</a>
-                  <a class="product__compare-btn" href="#">Добавить к сравнению</a>
-                </div>
-              </div>
-              <div class="product__info">
-                <h4 class="product__name"><a class="product__name-link" href="#">Профессиональная селфи-палка</a></h4>
-                <p class="product__price">1 500 руб.</p>
-              </div>
-            </article>
-            <article class="product-cards__card product">
-              <div class="product__link">
-                <img class="product__photo" src="img/products/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-                <div class="product__buy-box">
-                  <a class="product__buy-btn btn">В корзину</a>
-                  <a class="product__compare-btn" href="#">Добавить к сравнению</a>
-                </div>
-              </div>
-              <div class="product__info">
-                <h4 class="product__name"><a class="product__name-link" href="#">Непотопляемая селфи-палка</a></h4>
-                <p class="product__price">2 500 руб.</p>
-              </div>
-            </article>
-            <article class="product-cards__card product">
-              <div class="product__link product__link_new">
-                <img class="product__photo" src="img/products/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-                <div class="product__buy-box">
-                  <a class="product__buy-btn btn">В корзину</a>
-                  <a class="product__compare-btn" href="#">Добавить к сравнению</a>
-                </div>
-              </div>
-              <div class="product__info">
-                <h4 class="product__name"><a class="product__name-link" href="#">Селфи-палка «Следуй за мной»</a></h4>
-                <p class="product__price">4 900 руб.</p>
-              </div>
-            </article>
-          </div>
-          <div class="main__catalog-pagination pagination" aria-label="Переключение страниц с карточками товаров">
-            <a class="pagination__link pagination__link_direction" href="#" aria-label="Переход на предыдущую страницу">Назад</a>
-            <div class="pagination__pages">
-              <a class="pagination__link pagination__link_page pagination__link_current" href="#" aria-label="Первая страница">1</a>
-              <a class="pagination__link pagination__link_page" href="#" aria-label="Вторая страница">2</a>
-              <a class="pagination__link pagination__link_page" href="#" aria-label="Третья страница">3</a>
-            </div>
-            <a class="pagination__link pagination__link_direction" href="#" aria-label="Переход на следующую страницу">Вперед</a>
-          </div>
-        </section>
+        </div>
       </div>
     </div>
-  </div>
+    <div class="catalog__container">
+      <div class="catalog__content centered">
+        <div class="catalog__filters">
+          <section class="filters">
+            <form class="filters__form" action="https://echo.htmlacademy.ru" method="get">
+              <!--Price Filter  -->
+              <fieldset class="filters__fieldset filters__fieldset_price">
+                <legend class="filters__legend filters__legend_price">Стоимость</legend>
+                <span class="filters__fieldset_border filters__fieldset_border_price"></span>
+                <div class="filters__price-range price-range">
+                  <div class="price-range__scale">
+                    <div class="price-range__bar"></div>
+                  </div>
+                  <div class="price-range__toggle toggle toggle_min"></div>
+                  <div class="price-range__toggle toggle toggle_max"></div>
+                </div>
+                <div class="price-range__select">
+                  <span class="price-range__select-min">от 0</span>
+                  <span class="price-range__select-min">до 5000</span>
+                </div>
+              </fieldset>
+              <!-- Colour Filter -->
+              <fieldset class="filters__fieldset filters__fieldset_colour">
+                <legend class="filters__legend filters__legend_color">Цвет</legend>
+                <span class="filters__fieldset_border filters__fieldset_border_colour"></span>
+                <ul class="filters__options">
+                  <li class="filters__option option">
+                    <input class="option__input" type="checkbox" id="filter-black-colour" checked>
+                    <label class="option__label option__label_checkbox" for="filter-black-colour">
+                      <svg class="option__icon option__icon_off">
+                        <use xlink:href="img/svg/icons.svg#checkbox-off"></use>
+                      </svg>
+                      <svg class="option__icon option__icon_on">
+                        <use xlink:href="img/svg/icons.svg#checkbox-on"></use>
+                      </svg>
+                      <span class="option__label-text">Черный</span>
+                    </label>
+                  </li>
+                  <li class="filters__option option">
+                    <input class="option__input" type="checkbox" id="filter-white-colour">
+                    <label class="option__label" for="filter-white-colour">
+                      <svg class="option__icon option__icon_off">
+                        <use xlink:href="img/svg/icons.svg#checkbox-off"></use>
+                      </svg>
+                      <svg class="option__icon option__icon_on">
+                        <use xlink:href="img/svg/icons.svg#checkbox-on"></use>
+                      </svg>
+                      <span class="option__label-text">Белый</span>
+                    </label>
+                  </li>
+                  <li class="filters__option option">
+                    <input class="option__input" type="checkbox" id="filter-blue-colour" checked>
+                    <label class="option__label" for="filter-blue-colour">
+                      <svg class="option__icon option__icon_off">
+                        <use xlink:href="img/svg/icons.svg#checkbox-off"></use>
+                      </svg>
+                      <svg class="option__icon option__icon_on">
+                        <use xlink:href="img/svg/icons.svg#checkbox-on"></use>
+                      </svg>
+                      <span class="option__label-text">Синий</span>
+                    </label>
+                  </li>
+                  <li class="filters__option option">
+                    <input class="option__input" type="checkbox" id="filter-red-colour" checked>
+                    <label class="option__label" for="filter-red-colour">
+                      <svg class="option__icon option__icon_off">
+                        <use xlink:href="img/svg/icons.svg#checkbox-off"></use>
+                      </svg>
+                      <svg class="option__icon option__icon_on">
+                        <use xlink:href="img/svg/icons.svg#checkbox-on"></use>
+                      </svg>
+                      <span class="option__label-text">Красный</span>
+                    </label>
+                  </li>
+                  <li class="filters__option option">
+                    <input class="option__input" type="checkbox" id="filter-rose-colour">
+                    <label class="option__label" for="filter-rose-colour">
+                      <svg class="option__icon option__icon_off">
+                        <use xlink:href="img/svg/icons.svg#checkbox-off"></use>
+                      </svg>
+                      <svg class="option__icon option__icon_on">
+                        <use xlink:href="img/svg/icons.svg#checkbox-on"></use>
+                      </svg>
+                      <span class="option__label-text">Розовый</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              <!-- Bluetooth Filter -->
+              <fieldset class="filters__fieldset filters__fieldset_bluetooth">
+                <legend class="filters__legend filters__legend_bluetooth">Bluetooth</legend>
+                <span class="filters__fieldset_border filters__fieldset_border_bluetooth"></span>
+                <ul class="filters__options option">
+                  <li class="filters__option option">
+                    <input class="visually-hidden option__input" type="radio" name="radio" id="yes" checked>
+                    <label class="option__radio" for="yes">
+                      <svg class="option__radio-icon option__radio-icon_off">
+                        <use xlink:href="img/svg/icons.svg#radio-off"></use>
+                      </svg>
+                      <svg class="option__radio-icon option__radio-icon_on">
+                        <use xlink:href="img/svg/icons.svg#radio-on"></use>
+                      </svg>
+                      <span class="option__label-text">Есть</span>
+                    </label>
+                  </li>
+                  <li class="filters__option option">
+                    <input class="visually-hidden option__input" type="radio" name="radio" id="no">
+                    <label class="option__radio" for="no">
+                      <svg class="option__radio-icon option__radio-icon_off">
+                        <use xlink:href="img/svg/icons.svg#radio-off"></use>
+                      </svg>
+                      <svg class="option__radio-icon option__radio-icon_on">
+                        <use xlink:href="img/svg/icons.svg#radio-on"></use>
+                      </svg>
+                      <span class="option__label-text">Нет</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              <button class="filters__submit-btn btn" aria-label="Показать" type="submit">Показать</button>
+            </form>
+          </section>
+        </div>
+        <div class="catalog__products">
+          <section class="product-cards">
+            <h3 class="visually-hidden">Список товаров</h3>
+            <div class="product-cards__inner">
+              <article class="product-cards__card product">
+                <div class="product__link">
+                  <img class="product__photo" src="img/products/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+                  <div class="product__buy-box">
+                    <a class="product__buy-btn btn">В корзину</a>
+                    <a class="product__compare-btn" href="#">Добавить к сравнению</a>
+                  </div>
+                </div>
+                <div class="product__info">
+                  <h4 class="product__name"><a class="product__name-link" href="#">Любительская селфи-палка</a></h4>
+                  <p class="product__price">500 руб.</p>
+                </div>
+              </article>
+              <article class="product-cards__card product">
+                <div class="product__link">
+                  <img class="product__photo" src="img/products/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
+                  <div class="product__buy-box">
+                    <a class="product__buy-btn btn">В корзину</a>
+                    <a class="product__compare-btn" href="#">Добавить к сравнению</a>
+                  </div>
+                </div>
+                <div class="product__info">
+                  <h4 class="product__name"><a class="product__name-link" href="#">Профессиональная селфи-палка</a></h4>
+                  <p class="product__price">1 500 руб.</p>
+                </div>
+              </article>
+              <article class="product-cards__card product">
+                <div class="product__link">
+                  <img class="product__photo" src="img/products/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+                  <div class="product__buy-box">
+                    <a class="product__buy-btn btn">В корзину</a>
+                    <a class="product__compare-btn" href="#">Добавить к сравнению</a>
+                  </div>
+                </div>
+                <div class="product__info">
+                  <h4 class="product__name"><a class="product__name-link" href="#">Непотопляемая селфи-палка</a></h4>
+                  <p class="product__price">2 500 руб.</p>
+                </div>
+              </article>
+              <article class="product-cards__card product">
+                <div class="product__link product__link_new">
+                  <img class="product__photo" src="img/products/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+                  <div class="product__buy-box">
+                    <a class="product__buy-btn btn">В корзину</a>
+                    <a class="product__compare-btn" href="#">Добавить к сравнению</a>
+                  </div>
+                </div>
+                <div class="product__info">
+                  <h4 class="product__name"><a class="product__name-link" href="#">Селфи-палка «Следуй за мной»</a></h4>
+                  <p class="product__price">4 900 руб.</p>
+                </div>
+              </article>
+            </div>
+            <div class="main__catalog-pagination pagination" aria-label="Переключение страниц с карточками товаров">
+              <a class="pagination__link pagination__link_direction" href="#" aria-label="Переход на предыдущую страницу">Назад</a>
+              <div class="pagination__pages">
+                <a class="pagination__link pagination__link_page pagination__link_current" href="#" aria-label="Первая страница">1</a>
+                <a class="pagination__link pagination__link_page" href="#" aria-label="Вторая страница">2</a>
+                <a class="pagination__link pagination__link_page" href="#" aria-label="Третья страница">3</a>
+              </div>
+              <a class="pagination__link pagination__link_direction" href="#" aria-label="Переход на следующую страницу">Вперед</a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
   </main>
   <footer class="site__footer footer">
     <div class="centered footer__inner">
